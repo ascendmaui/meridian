@@ -6,14 +6,15 @@ This repository is the durable source of truth for Meridian. Application source 
 
 ## Status
 
-Scaffold / SoT repo. Content beyond this README has not been checked in yet.
+Project is under development with source code, tests, and documentation.
 
-## Planned layout
+## Project Structure
 
 ```
-src/          # globe client
-public/       # static assets
+src/          # globe client source code
+index.html    # main HTML entry point
 docs/         # product notes
+tests/        # test suite (unit, integration, e2e)
 ```
 
 ## Testing
@@ -73,4 +74,3 @@ See [docs/AUDIT.md](docs/AUDIT.md) for the audit plan and [AUDIT-RESULTS.md](AUD
 ## Related
 
 Owned by Ascend Maui (`ascendmaui/meridian`).
-
