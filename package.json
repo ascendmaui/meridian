@@ -5,13 +5,13 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "test:unit": "jest --testPathPattern=unit/",
-    "test:integration": "jest --testPathPattern=integration/",
+    "test:unit": "jest --testPathPatterns=unit/",
+    "test:integration": "jest --testPathPatterns=integration/",
     "test:e2e": "cypress run",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
-    "audit:performance": "lighthouse --output=json --output-path=./lighthouse-report.json",
-    "audit:accessibility": "lighthouse --only-categories=accessibility --output=json --output-path=./a11y-report.json",
+    "audit:performance": "lighthouse --output=json --output-path=./lighthouse-report.json http://localhost:8080",
+    "audit:accessibility": "lighthouse --only-categories=accessibility --output=json --output-path=./a11y-report.json http://localhost:8080",
     "audit:security": "npm audit",
     "audit:content": "echo \"Content audit manual step\"",
     "audit:compatibility": "echo \"Compatibility audit manual step\"",
@@ -28,7 +28,7 @@
     "cypress": "^16.1.1",
     "eslint": "^8.0.0",
     "husky": "^8.0.0",
-    "jest": "^29.0.0",
+    "jest": "^30.5.2",
     "lighthouse": "^13.5.0"
   }
 }

@@ -37,7 +37,7 @@ npx jest --testPathPatterns=unit/
 
 ### Integration Tests
 
-Integration tests verify that different parts of the system work together correctly, including content and compatibility checks.
+Integration tests verify that different parts of the system work together correctly, including content, performance, accessibility, and security checks.
 
 ```bash
 # Run all integration tests
@@ -124,8 +124,11 @@ This will run unit, integration, and (if a server is detected) end-to-end tests.
 - Test DOM interactions and event handling
 - Test data flow through the system
 - Use realistic test data
-- Include content checks (e.g., no placeholder text)
-- Include compatibility checks (e.g., viewport meta tag)
+- Include content checks (e.g., no placeholder text, meta description present)
+- Include performance checks (e.g., no external stylesheets)
+- Include accessibility checks (e.g., skip link present, proper ARIA labels)
+- Include security checks (e.g., no inline event handlers)
+- Use the existing test suite as a guide for adding new tests
 
 ### E2E Testing Tips
 
@@ -172,4 +175,5 @@ lsof -ti:8080 | xargs kill -9 2>/dev/null || true
 - [Audit Plan](AUDIT.md) - Information about performance, accessibility, security, content, and compatibility audits
 - [Audit Results](AUDIT-RESULTS.md) - Latest audit scores and improvement history
 - [Contributing Guidelines](CONTRIBUTING.md) - Detailed contribution process
+
 
