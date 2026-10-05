@@ -36,15 +36,31 @@ const server = http.createServer((req, res) => {
     if (error) {
       if (error.code === 'ENOENT') {
         fs.readFile('./404.html', (err, content) => {
-          res.writeHead(404, { 'Content-Type': 'text/html' });
+          const headers = {
+            'Content-Type': 'text/html',
+            'Content-Length': Buffer.byteLength(content, 'utf-8'),
+            'Date': new Date().toUTCString()
+          };
+          res.writeHead(404, headers);
           res.end(content, 'utf-8');
         });
       } else {
-        res.writeHead(500);
-        res.end(`Server Error: ${error.code}`);
+        const errorMsg = `Server Error: ${error.code}`;
+        const headers = {
+          'Content-Type': 'text/plain',
+          'Content-Length': Buffer.byteLength(errorMsg, 'utf-8'),
+          'Date': new Date().toUTCString()
+        };
+        res.writeHead(500, headers);
+        res.end(errorMsg, 'utf-8');
       }
     } else {
-      res.writeHead(200, { 'Content-Type': contentType });
+      const headers = {
+        'Content-Type': contentType,
+        'Content-Length': Buffer.byteLength(content, 'utf-8'),
+        'Date': new Date().toUTCString()
+      };
+      res.writeHead(200, headers);
       res.end(content, 'utf-8');
     }
   });
@@ -53,4 +69,3 @@ const server = http.createServer((req, res) => {
 server.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });
-
