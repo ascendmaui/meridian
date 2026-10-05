@@ -21,15 +21,27 @@
       .skip-link:focus {
         top: 0;
       }
+      #globe-container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f0f0f0;
+        overflow: hidden;
+      }
+      #globe-container canvas {
+        display: block;
+      }
     </style>
 </head>
 <body>
     <a href="#globe-container" class="skip-link">Skip to globe visualization</a>
     <main>
-        <div id="globe-container" aria-label="3D globe visualization" style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; background: #f0f0f0;">
-          <div>Meridian Globe</div>
-        </div>
+        <div id="globe-container" aria-label="3D globe visualization"></div>
     </main>
     <script type="module" src="/src/index.js"></script>
+    <!-- Three.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
 </body>
 </html>
