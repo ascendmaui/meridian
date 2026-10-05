@@ -16,4 +16,6 @@ if (typeof window !== 'undefined') {
 }
 
 // Export for use in other environments (e.g., Node.js for SSR)
-module.exports = { initGlobe };
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { initGlobe };
+}
