@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meridian Globe</title>
+    <style>
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #000;
+        color: white;
+        padding: 8px;
+        z-index: 100;
+      }
+      .skip-link:focus {
+        top: 0;
+      }
+    </style>
+</head>
+<body>
+    <a href="#globe-container" class="skip-link">Skip to globe visualization</a>
+    <main>
+        <div id="globe-container" aria-label="3D globe visualization" style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; background: #f0f0f0;">
+          <div>Meridian Globe</div>
+        </div>
+    </main>
+    <script type="module" src="/src/index.js"></script>
+</body>
+</html>
