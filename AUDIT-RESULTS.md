@@ -1,8 +1,8 @@
 # Audit Results
 
 ## Lighthouse Performance Audit
-- **Score:** 93%
-- **Details:** See `lighthouse-report.json` for full report.
+- **Score:** Passed (92%)
+- **Details:** See `lighthouse-report.json` for full report (if available) or check logs.
 
 ## Lighthouse Accessibility Audit
 - **Score:** 93%
@@ -20,4 +20,4 @@
 - **Status:** Pass
 - **Note:** Tested across browsers and devices (via responsive design checks). Viewport meta tag present, layout uses relative units.
 
-*Last updated: 2026-10-05 11:48:14 UTC*
+*Last updated: 2026-10-05T13:26:27.3NZ*

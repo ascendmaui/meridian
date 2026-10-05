@@ -71,7 +71,10 @@ E2e tests require a running instance of the application. Before running E2e test
    # Option 2: Using Node.js serve (if installed)
    npx serve -l 8080
    
-   # Option 3: Using any static file server
+   # Option 3: Using the provided test server
+   #     node test-server.js
+   
+   # Option 4: Using any static file server
    ```
 
 2. Then run the E2e tests:
@@ -175,5 +178,3 @@ lsof -ti:8080 | xargs kill -9 2>/dev/null || true
 - [Audit Plan](AUDIT.md) - Information about performance, accessibility, security, content, and compatibility audits
 - [Audit Results](AUDIT-RESULTS.md) - Latest audit scores and improvement history
 - [Contributing Guidelines](CONTRIBUTING.md) - Detailed contribution process
-
-

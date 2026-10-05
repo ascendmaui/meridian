@@ -4,6 +4,9 @@ module.exports = {
     es2021: true,
     node: true,
   },
+  globals: {
+    THREE: true, // Three.js library loaded via CDN
+  },
   extends: 'eslint:recommended',
   parserOptions: {
     ecmaVersion: 12,
