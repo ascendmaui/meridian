@@ -62,6 +62,7 @@ npx cypress run
 #### Prerequisites for E2E Tests
 
 E2e tests require a running instance of the application. Before running E2e tests:
+> Note: The provided test-server.js may not work in all environments. The Python HTTP server (option 1) is recommended.
 
 1. Start a local development server:
    ```bash

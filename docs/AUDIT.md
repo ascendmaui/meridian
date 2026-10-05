@@ -55,6 +55,7 @@ This document outlines the audit areas for the Meridian interactive globe experi
 1. **Pre-audit Setup**
    - Define audit scope and criteria
    - Set up testing environment
+   - Ensure the application server is running and accessible on http://localhost:8080
    - Prepare audit checklists and tools
 
 2. **Execution**
