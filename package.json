@@ -25,15 +25,19 @@
   "author": "Ascend Maui",
   "license": "MIT",
   "devDependencies": {
+    "@babel/preset-env": "^7.29.7",
     "cypress": "^16.1.1",
     "eslint": "^8.0.0",
     "husky": "^8.0.0",
     "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2",
     "lighthouse": "^13.5.0"
   },
-  "dependencies": {},
   "overrides": {
     "argparse": "^2.0.0",
     "js-yaml": "^4.0.0"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
   }
 }

@@ -5,18 +5,6 @@ const mockContainer = {
   appendChild: jest.fn(),
 };
 
-const mockDocument = {
-  getElementById: jest.fn().mockReturnValue(mockContainer),
-};
-
-const mockWindow = {
-  addEventListener: jest.fn(),
-  requestAnimationFrame: jest.fn().mockImplementation((cb) => {
-    // Do not call the callback to avoid infinite loop
-    return 1; // return a requestId
-  }),
-};
-
 const mockTHREE = {
   Scene: jest.fn().mockImplementation(() => {
     return {
@@ -67,28 +55,46 @@ const mockTHREE = {
   }),
 };
 
-// Mock globals
-global.document = mockDocument;
-global.window = mockWindow;
-global.requestAnimationFrame = mockWindow.requestAnimationFrame;
-global.THREE = mockTHREE;
+let initGlobe;
 
-// Mock console
-jest.spyOn(console, 'log').mockImplementation(() => {});
-jest.spyOn(console, 'error').mockImplementation(() => {});
+beforeEach(() => {
+  jest.resetModules();
+  jest.clearAllMocks();
+  
+  // Mock document.getElementById
+  const documentGetElementByIdSpy = jest.spyOn(document, 'getElementById');
+  documentGetElementByIdSpy.mockReturnValue(mockContainer);
+  
+  // Mock window.addEventListener
+  const windowAddEventListenerSpy = jest.spyOn(window, 'addEventListener');
+  
+  // Mock window.requestAnimationFrame
+  const windowRequestAnimationFrameSpy = jest.spyOn(window, 'requestAnimationFrame');
+  windowRequestAnimationFrameSpy.mockImplementation((cb) => {
+    // Do not call the callback to avoid infinite loop
+    return 1; // return a requestId
+  });
+  
+  // Mock THREE global
+  global.THREE = mockTHREE;
+  
+  if (typeof global.THREE === 'undefined') {
+    throw new Error('THREE is undefined');
+  }
 
-// Now import the module
-const { initGlobe } = require('../../src/index');
+  // Mock console
+  jest.spyOn(console, 'log').mockImplementation(() => {});
+  jest.spyOn(console, 'error').mockImplementation(() => {});
+
+  // Now import the module
+  initGlobe = require('../../src/index').initGlobe;
+});
+
+afterEach(() => {
+  jest.restoreAllMocks();
+});
 
 describe('initGlobe', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
-
-  afterEach(() => {
-    jest.restoreAllMocks();
-  });
-
   test('should log initialization message', () => {
     initGlobe();
     expect(console.log).toHaveBeenCalledWith('Meridian globe experience initialized');
@@ -122,7 +128,7 @@ describe('initGlobe', () => {
 
   test('should handle window resize event', () => {
     initGlobe();
-    expect(mockWindow.addEventListener).toHaveBeenCalledWith('resize', expect.any(Function));
+    expect(window.addEventListener).toHaveBeenCalledWith('resize', expect.any(Function));
   });
 
   test('should not throw when Three.js is undefined', () => {
@@ -187,5 +193,65 @@ describe('initGlobe', () => {
     initGlobe();
     const lightInstance = mockTHREE.DirectionalLight.mock.results[0].value;
     expect(lightInstance.position.set).toHaveBeenCalledWith(5, 5, 5);
+  });
+  test('should log error and return when container element is not found', () => {
+    // Mock document.getElementById to return null
+    const documentGetElementByIdSpy = jest.spyOn(document, 'getElementById');
+    documentGetElementByIdSpy.mockReturnValue(null);
+    
+    // Mock console.error
+    const consoleErrorSpy = jest.spyOn(console, 'error');
+    
+    initGlobe();
+    
+    expect(consoleErrorSpy).toHaveBeenCalledWith('Globe container element not found');
+    
+    // Restore the mock
+    documentGetElementByIdSpy.mockRestore();
+    consoleErrorSpy.mockRestore();
+  });
+
+  test('should not create Three.js objects when Three.js is undefined', () => {
+    // Set THREE to undefined
+    const originalTHREE = global.THREE;
+    global.THREE = undefined;
+    
+    // Mock console.warn
+    const consoleWarnSpy = jest.spyOn(console, 'warn');
+    
+    initGlobe();
+    
+    expect(consoleWarnSpy).toHaveBeenCalledWith('Three.js not found, globe visualization disabled');
+    
+    // Verify no Three.js objects were created
+    expect(mockTHREE.Scene).not.toHaveBeenCalled();
+    expect(mockTHREE.PerspectiveCamera).not.toHaveBeenCalled();
+    expect(mockTHREE.WebGLRenderer).not.toHaveBeenCalled();
+    
+    // Restore
+    global.THREE = originalTHREE;
+    consoleWarnSpy.mockRestore();
+  });
+
+  test('should call requestAnimationFrame for animation loop', () => {
+    // Mock requestAnimationFrame to capture the callback
+    const mockRequestAnimationFrame = jest.spyOn(window, 'requestAnimationFrame');
+    let animationCallback = null;
+    mockRequestAnimationFrame.mockImplementation((cb) => {
+      animationCallback = cb;
+      return 1; // return a requestId
+    });
+    
+    initGlobe();
+    
+    expect(mockRequestAnimationFrame).toHaveBeenCalled();
+    expect(typeof animationCallback).toBe('function');
+    
+    // Call the animation callback to ensure it doesn't throw
+    expect(() => {
+      animationCallback();
+    }).not.toThrow();
+    
+    mockRequestAnimationFrame.mockRestore();
   });
 });
