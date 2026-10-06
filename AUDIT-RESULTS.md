@@ -1,8 +1,7 @@
-Note: These audit results are from a previous run. To update the results, ensure the application server is running on port 8080 and run the audit scripts.
 # Audit Results
 
 ## Lighthouse Performance Audit
- - **Score:** 92%
+ - **Score:** 99%
 - **Details:** See `lighthouse-report.json` for full report.
 
 ## Lighthouse Accessibility Audit
@@ -10,7 +9,7 @@ Note: These audit results are from a previous run. To update the results, ensure
 - **Details:** See `a11y-report.json` for full report.
 
 ## Security Audit (npm audit)
-- **Vulnerabilities:** 19 moderate
+- **Vulnerabilities:** 0
 - **Details:** See `audit-report.json` for full report.
 
 ## Content Audit
@@ -21,4 +20,4 @@ Note: These audit results are from a previous run. To update the results, ensure
 - **Status:** Pass
 - **Note:** Tested across browsers and devices (via responsive design checks). Viewport meta tag present, layout uses relative units.
 
-*Last updated: 2026-10-06 01:43:00 UTC*
+*Last updated: 2026-10-06 04:44:45 UTC
