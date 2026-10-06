@@ -71,7 +71,9 @@ E2e tests require a running instance of the application. Before running E2e test
    # Option 2: Using Node.js serve (if installed)
    npx serve -l 8080
    
-   # Option 3: Using the provided test server
+   # Option 3: Using the provided test servers
+   #     node server.js (verified working)
+   #     # or
    #     node test-server.js (verified working)
    
    # Option 4: Using any static file server
