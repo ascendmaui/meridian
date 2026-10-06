@@ -33,3 +33,5 @@ The site provides a rotating globe visualization for educational and exploratory
 - This document follows the proposed llms.txt format for AI agent guidance
 - Last updated: 2026-10-05
 
+
+[Meridian Globe](/) - Interactive 3D globe visualization
