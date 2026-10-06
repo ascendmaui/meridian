@@ -1,0 +1,25 @@
+{
+  "@context": "https://agenticresourcediscovery.org/contexts/v1",
+  "type": "AIResourceCatalog",
+  "name": "Meridian Globe Experience",
+  "description": "Interactive 3D globe visualization for educational and exploratory purposes",
+  "version": "1.0.0",
+  "provider": {
+    "name": "Ascend Maui",
+    "url": "https://ascendmaui.example.com"
+  },
+  "resources": [
+    {
+      "name": "Globe Visualization",
+      "description": "Interactive 3D globe using Three.js",
+      "url": "/",
+      "type": "InteractiveExperience",
+      "interactionModel": {
+        "type": "VisualObservation",
+        "controls": ["keyboard navigation"],
+        "accessibilityFeatures": ["skip link", "ARIA labels", "semantic HTML"]
+      }
+    }
+  ],
+  "lastUpdated": "2026-10-05T00:00:00Z"
+}
