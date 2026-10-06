@@ -1,7 +1,8 @@
+Note: These audit results are from a previous run. To update the results, ensure the application server is running on port 8080 and run the audit scripts.
 # Audit Results
 
 ## Lighthouse Performance Audit
- - **Score:** 93%
+ - **Score:** 92%
 - **Details:** See `lighthouse-report.json` for full report.
 
 ## Lighthouse Accessibility Audit
@@ -20,4 +21,4 @@
 - **Status:** Pass
 - **Note:** Tested across browsers and devices (via responsive design checks). Viewport meta tag present, layout uses relative units.
 
-*Last updated: 2026-10-05 21:09:41 UTC
+*Last updated: 2026-10-06 00:16:00 UTC
