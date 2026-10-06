@@ -96,3 +96,12 @@ This document outlines the audit areas for the Meridian interactive globe experi
 **Low Issues**: [Number]
 **Overall Status**: [Pass/Fail/Conditional]
 **Notes**: [Additional comments]
+
+## Recent Audit Findings (as of 2026-10-06)
+
+- Performance audit: Lighthouse encounters a Chrome interstitial error when navigating to http://localhost:8080/. The server responds correctly with 200 OK for HTML and JS resources. Further investigation is needed to determine if the issue is related to module script handling, external resource loading (Three.js CDN), or Chrome security settings.
+- Security audit: Updated Jest to 30.5.2, resolving 28 high-severity vulnerabilities. Five moderate-severity vulnerabilities remain in the sprintf-js package (dependency of Jest via babel-plugin-istanbul) and are under review.
+- Accessibility audit: Score remains 100%.
+- Content audit: Pass.
+- Compatibility audit: Pass.
+
