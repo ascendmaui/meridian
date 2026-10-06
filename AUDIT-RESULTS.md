@@ -1,7 +1,7 @@
 # Audit Results
 
 ## Lighthouse Performance Audit
- - **Score:** 100%
+ - **Score:** 98%
 - **Details:** Performance audit passed. See `lighthouse-report.json` for full report.
 
 ## Lighthouse Accessibility Audit
@@ -20,5 +20,5 @@
 - **Status:** Pass
 - **Note:** Tested across browsers and devices (via responsive design checks). Viewport meta tag present, layout uses relative units.
 
-*Last updated: 2026-10-06T19:59:45.3NZ
+*Last updated: 2026-10-06T20:49:14.3NZ
 *Draft PR audit band: unit tests, integration tests, end-to-end tests, performance audit, accessibility audit, security audit, content audit, and compatibility audit all passed.
