@@ -1,3 +1,3 @@
 // Set up THREE global for jsdom testing
-const THREE = require('three');
+import * as THREE from 'three';
 global.THREE = THREE;
