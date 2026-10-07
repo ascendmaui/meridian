@@ -84,6 +84,30 @@ E2e tests require a running instance of the application. Before running E2e test
    npm run test:e2e
    ```
 
+### Running Audits
+
+Meridian includes Lighthouse-based audits for performance, accessibility, security, content, and compatibility.
+
+```bash
+# Run performance audit
+npm run audit:performance
+
+# Run accessibility audit
+npm run audit:accessibility
+
+# Run security audit (npm audit)
+npm run audit:security
+
+# Run content audit (manual step)
+npm run audit:content
+
+# Run compatibility audit (manual step)
+npm run audit:compatibility
+
+# Run all audits and tests together
+./run-audits-tests.sh
+```
+
 ### Running All Tests
 
 To run the complete test suite:
