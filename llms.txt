@@ -31,7 +31,7 @@ The site provides a rotating globe visualization for educational and exploratory
 ## Contact and Policy
 - For questions about AI agent interaction, contact site administrators
 - This document follows the proposed llms.txt format for AI agent guidance
-- Last updated: 2026-10-05
+- Last updated: 2026-10-07
 
 
 [Meridian Globe](/) - Interactive 3D globe visualization

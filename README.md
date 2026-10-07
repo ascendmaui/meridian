@@ -12,7 +12,7 @@ Project is under development with source code, tests, and documentation.
 
 | Audit | Status | Score |
 |-------|--------|-------|
- | Performance | ✅ Passed | 99% |
+| Performance | ✅ Passed | 100% |
 | Accessibility | ✅ Passed | 100% |
 | Security | ✅ Passed | 0 vulnerabilities |
 | Content | ✅ Passed | Manual review passed |

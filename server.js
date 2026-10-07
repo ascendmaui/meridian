@@ -40,6 +40,11 @@ const server = http.createServer((req, res) => {
         contentType = 'image/jpeg';
         break;
     }
+    // Special case for AI catalog files to use proper media type for agent discovery
+    if (req.url === '/ai-catalog.json' || req.url === '/.well-known/ai-catalog.json')
+    {
+      contentType = "application/ai-catalog+json";
+    }
 
     fs.readFile(filePath, (err, content) => {
       if (err) {
