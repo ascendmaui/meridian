@@ -237,6 +237,19 @@ describe('initGlobe', () => {
     // Mock requestAnimationFrame to capture the callback
     const mockRequestAnimationFrame = jest.spyOn(window, 'requestAnimationFrame');
     let animationCallback = null;
+    let sphereInstance = null;
+    
+    // Mock THREE.Mesh to capture the instance
+    mockTHREE.Mesh.mockImplementation((geometry, material) => {
+      const instance = {
+        geometry,
+        material,
+        rotation: { y: 0 },
+      };
+      sphereInstance = instance;
+      return instance;
+    });
+    
     mockRequestAnimationFrame.mockImplementation((cb) => {
       animationCallback = cb;
       return 1; // return a requestId
@@ -246,11 +259,18 @@ describe('initGlobe', () => {
     
     expect(mockRequestAnimationFrame).toHaveBeenCalled();
     expect(typeof animationCallback).toBe('function');
+    expect(sphereInstance).not.toBeNull();
     
-    // Call the animation callback to ensure it doesn't throw
+    // Store initial rotation
+    const initialRotation = sphereInstance.rotation.y;
+    
+    // Call the animation callback
     expect(() => {
       animationCallback();
     }).not.toThrow();
+    
+    // Verify that the rotation has changed
+    expect(sphereInstance.rotation.y).toBeGreaterThan(initialRotation);
     
     mockRequestAnimationFrame.mockRestore();
   });

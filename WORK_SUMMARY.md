@@ -65,3 +65,9 @@ All components of the draft-PR audit band are verified to be working correctly. 
 - Verified that all existing tests continue to pass.
 
 These changes ensure that the agentic browsing audit will consistently score 100% when using either the main server or the test server.
+
+## Today's Changes (2026-10-07)
+
+- Enhanced unit test for animation loop in tests/unit/index.test.js to verify that the animation callback actually updates the sphere's rotation.
+- All tests continue to pass: unit (21), integration (18), e2e (4)
+- Improved test coverage and quality without changing functionality
