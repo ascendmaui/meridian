@@ -190,6 +190,48 @@ lsof -ti:8080 | xargs kill -9 2>/dev/null || true
 - In Cypress, use appropriate waiting commands (`cy.wait()`, interception, etc.)
 - Ensure async operations are properly awaited in tests
 
+
+## Running Audits
+
+Meridian provides npm scripts to run various audits:
+
+### Performance Audit
+```bash
+npm run audit:performance
+```
+Runs Lighthouse performance audit and outputs results to `./lighthouse-report.json`.
+
+### Accessibility Audit
+```bash
+npm run audit:accessibility
+```
+Runs Lighthouse accessibility audit (only accessibility category) and outputs results to `./a11y-report.json`.
+
+### Security Audit
+```bash
+npm run audit:security
+```
+Runs `npm audit` to check for vulnerabilities.
+
+### Content Audit
+```bash
+npm run audit:content
+```
+Manual step: review content for clarity, tone, and accuracy.
+
+### Compatibility Audit
+```bash
+npm run audit:compatibility
+```
+Manual step: test across browsers and devices.
+
+There are also helper scripts that start the server, run the audit, and then stop the server:
+- `run-audit-accessibility.sh`
+- `run-audit-performance.sh`
+- `run-e2e.sh` (end-to-end tests)
+- `run-e2e-with-server.sh` (E2E with server startup)
+- `run-e2e-capture.sh` (E2E with capture)
+
 ## Related Documentation
 
 - [Audit Plan](AUDIT.md) - Information about performance, accessibility, security, content, and compatibility audits
