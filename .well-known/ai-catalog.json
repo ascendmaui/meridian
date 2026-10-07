@@ -1,25 +1,26 @@
 {
-  "@context": "https://agenticresourcediscovery.org/contexts/v1",
-  "type": "AIResourceCatalog",
-  "name": "Meridian Globe Experience",
-  "description": "Interactive 3D globe visualization for educational and exploratory purposes",
-  "version": "1.0.0",
-  "provider": {
-    "name": "Ascend Maui",
-    "url": "https://ascendmaui.example.com"
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Ascend Maui",
+    "identifier": "did:web:ascendmaui.example.com",
+    "documentationUrl": "https://ascendmaui.example.com/docs"
   },
-  "resources": [
+  "entries": [
     {
-      "name": "Globe Visualization",
-      "description": "Interactive 3D globe using Three.js",
-      "url": "/",
-      "type": "InteractiveExperience",
-      "interactionModel": {
-        "type": "VisualObservation",
-        "controls": ["keyboard navigation"],
-        "accessibilityFeatures": ["skip link", "ARIA labels", "semantic HTML"]
+      "identifier": "urn:air:ascendmaui:meridian:globe-experience",
+      "displayName": "Meridian Globe Experience",
+      "type": "application/ai-catalog+json",
+      "url": "http://localhost:8080/",
+      "representativeQueries": [
+        "show globe",
+        "rotate globe", 
+        "zoom globe",
+        "explore interactive 3D visualization",
+        "view educational globe experience"
+      ],
+      "trustManifest": {
+        "identity": "ascendmaui.example.com"
       }
     }
-  ],
-  "lastUpdated": "2026-10-05T00:00:00Z"
+  ]
 }

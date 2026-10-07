@@ -9,7 +9,7 @@
     {
       "identifier": "urn:air:ascendmaui:meridian:globe-experience",
       "displayName": "Meridian Globe Experience",
-      "type": "text/html",
+      "type": "application/ai-catalog+json",
       "url": "http://localhost:8080/",
       "representativeQueries": [
         "show globe",

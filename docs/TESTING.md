@@ -37,7 +37,7 @@ npx jest --testPathPatterns=unit/
 
 ### Integration Tests
 
-Integration tests verify that different parts of the system work together correctly, including content, performance, accessibility, and security checks.
+Integration tests verify that different parts of the system work together correctly, including content, performance, accessibility, security, and ARD (Agent Description Record) validation checks.
 
 ```bash
 # Run all integration tests
@@ -59,54 +59,44 @@ npm run test:e2e
 npx cypress run
 ```
 
-#### Prerequisites for E2E Tests
-
-E2e tests require a running instance of the application. Before running E2e tests:
-
-1. Start a local development server:
-   ```bash
-   # Option 1: Using Python
-   python3 -m http.server 8080
-   
-   # Option 2: Using Node.js serve (if installed)
-   npx serve -l 8080
-   
-   # Option 3: Using the provided test servers
-   #     node server.js (verified working)
-   #     # or
-   #     node test-server.js (verified working)
-   
-   # Option 4: Using any static file server
-   ```
-
-2. Then run the E2e tests:
-   ```bash
-   npm run test:e2e
-   ```
-
-### Running Audits
-
-Meridian includes Lighthouse-based audits for performance, accessibility, security, content, and compatibility.
-
-```bash
-# Run performance audit (includes agentic-browsing category)
-npm run audit:performance
-
-# Run accessibility audit
-npm run audit:accessibility
-
-# Run security audit (npm audit)
-npm run audit:security
-
-# Run content audit (manual step)
-npm run audit:content
-
-# Run compatibility audit (manual step)
-npm run audit:compatibility
-
-# Run all audits and tests together
-./run-audits-tests.sh
-```
+ #### Prerequisites for E2E Tests
+ 
+ E2e tests require a running instance of the application. Before running E2e tests:
+ 
+ 1. Start a local development server on port 8080. You can use:
+    - `python3 -m http.server 8080`
+    - `npx serve -l 8080` (if serve is installed)
+    - `node server.js` or `node test-server.js` (both serve the application and AI catalog with proper media type)
+    - Any other static file server serving the current directory
+ 
+ 2. Then run the E2e tests:
+    ```bash
+    npm run test:e2e
+    ```
+ 
+ ### Running Audits
+ 
+ Meridian includes Lighthouse-based audits for performance, accessibility, security, content, and compatibility.
+ 
+ ```bash
+ # Run performance audit (includes agentic-browsing category)
+ npm run audit:performance
+ 
+ # Run accessibility audit
+ npm run audit:accessibility
+ 
+ # Run security audit (npm audit)
+ npm run audit:security
+ 
+ # Run content audit (manual step)
+ npm run audit:content
+ 
+ # Run compatibility audit (manual step)
+ npm run audit:compatibility
+ 
+ # Run all audits and tests together
+ ./run-audits-tests.sh
+ ```
 
 ### Running All Tests
 
@@ -158,6 +148,7 @@ This will run unit, integration, and (if a server is detected) end-to-end tests.
 - Include accessibility checks (e.g., skip link present, proper ARIA labels)
 - Include security checks (e.g., no inline event handlers)
 - Use the existing test suite as a guide for adding new tests
+  - Validate ARD (Agent Description Record) schemas (e.g., ai-catalog.json) using the Lighthouse ConformanceTester
 
 ### E2E Testing Tips
 

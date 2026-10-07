@@ -254,4 +254,59 @@ describe('initGlobe', () => {
     
     mockRequestAnimationFrame.mockRestore();
   });
+  test('should handle zero width or height container', () => {
+    // Mock container with zero width and height
+    const mockContainerZero = {
+      clientWidth: 0,
+      clientHeight: 0,
+      appendChild: jest.fn(),
+    };
+
+    // Mock document.getElementById to return our zero-sized container
+    const documentGetElementByIdSpy = jest.spyOn(document, 'getElementById');
+    documentGetElementByIdSpy.mockReturnValue(mockContainerZero);
+
+    // Mock window.addEventListener
+    const windowAddEventListenerSpy = jest.spyOn(window, 'addEventListener'); // eslint-disable-line
+
+    // Mock window.requestAnimationFrame
+    const windowRequestAnimationFrameSpy = jest.spyOn(window, 'requestAnimationFrame');
+    windowRequestAnimationFrameSpy.mockImplementation(() => {
+      // Do not call the callback to avoid infinite loop
+      return 1; // return a requestId
+    });
+
+    // Mock THREE global
+    global.THREE = mockTHREE;
+
+    // Mock console
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+
+    // Now import the module
+    const { initGlobe } = require('../../src/index');
+
+    // Expect no throw
+    expect(() => {
+      initGlobe();
+    }).not.toThrow();
+
+    // Check that the camera was created with default aspect ratio (800/600 = 4/3)
+    expect(mockTHREE.PerspectiveCamera).toHaveBeenCalledWith(
+      75, // field of view
+      800 / 600, // aspect ratio
+      0.1, // near clipping plane
+      1000 // far clipping plane
+    );
+
+    // Check that the renderer was set to default size (800x600)
+    const rendererInstance = mockTHREE.WebGLRenderer.mock.results[0].value;
+    expect(rendererInstance.setSize).toHaveBeenCalledWith(800, 600);
+
+    // Restore mocks
+    documentGetElementByIdSpy.mockRestore();
+    windowAddEventListenerSpy.mockRestore();
+    windowRequestAnimationFrameSpy.mockRestore();
+    jest.restoreAllMocks();
+  });
 });

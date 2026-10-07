@@ -26,9 +26,11 @@ function initGlobe() {
   scene.background = new THREE.Color(0x87ceeb); // Sky blue
 
   // Create camera
+  const width = container.clientWidth || 800;
+  const height = container.clientHeight || 600;
   const camera = new THREE.PerspectiveCamera(
     75, // field of view
-    container.clientWidth / container.clientHeight, // aspect ratio
+    width / height, // aspect ratio
     0.1, // near clipping plane
     1000 // far clipping plane
   );
@@ -36,7 +38,7 @@ function initGlobe() {
 
   // Create renderer
   const renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setSize(width, height);
   container.appendChild(renderer.domElement);
 
   // Create sphere (globe)
