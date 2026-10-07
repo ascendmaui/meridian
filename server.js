@@ -45,6 +45,8 @@ const server = http.createServer((req, res) => {
     {
       contentType = "application/ai-catalog+json";
     }
+    // Add cache header for static assets
+    res.setHeader("Cache-Control", "public, max-age=86400");
 
     fs.readFile(filePath, (err, content) => {
       if (err) {
@@ -71,8 +73,8 @@ const server = http.createServer((req, res) => {
     res.end('Internal Server Error', 'utf8');
   }
 });
-
-server.listen(port, "localhost");
+server.listen(port, "0.0.0.0");
+server.listen(port, "::");
 server.on("listening", () => {
   console.log(`Server running at http://localhost:${port}/`);
 });

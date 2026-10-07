@@ -23,217 +23,78 @@ First, ensure you have Node.js installed and then install project dependencies:
 npm install
 ```
 
-### Unit Tests
-
-Unit tests focus on individual functions and modules in isolation.
+### Running Unit Tests
 
 ```bash
-# Run all unit tests
 npm run test:unit
-
-# Or using jest directly
-npx jest --testPathPatterns=unit/
 ```
 
-### Integration Tests
-
-Integration tests verify that different parts of the system work together correctly, including content, performance, accessibility, security, and ARD (Agent Description Record) validation checks.
+### Running Integration Tests
 
 ```bash
-# Run all integration tests
 npm run test:integration
-
-# Or using jest directly
-npx jest --testPathPatterns=integration/
 ```
 
-### End-to-End Tests
+### Running End-to-End Tests
 
-End-to-end tests simulate real user interactions with the application in a browser.
+E2e tests require a running instance of the application. Before running E2e tests:
 
-```bash
-# Run all Cypress tests
-npm run test:e2e
+1. Start the server: `node server.js`
+2. In another terminal, run the tests: `npm run test:e2e`
 
-# Or using cypress directly
-npx cypress run
+### Prerequisites for E2E Tests
+  
+  E2e tests require a running instance of the application. Before running E2e tests:
+  
+  1. Ensure the server is running on port 8080
+  2. Ensure the server is accessible at http://localhost:8080/
+  
+  Then run the tests:
+  
+  ```bash
+  npm run test:e2e
+  ```
+  
+  Alternatively, you can use the provided script:
+  
+  ```bash
+  ./run-e2e.sh
+  ```
 ```
-
- #### Prerequisites for E2E Tests
- 
- E2e tests require a running instance of the application. Before running E2e tests:
- 
- 1. Start a local development server on port 8080. You can use:
-    - `python3 -m http.server 8080`
-    - `npx serve -l 8080` (if serve is installed)
-    - `node server.js` or `node test-server.js` (both serve the application and AI catalog with proper media type)
-    - Any other static file server serving the current directory
- 
- 2. Then run the E2e tests:
-    ```bash
-    npm run test:e2e
-    ```
- 
- ### Running Audits
- 
- Meridian includes Lighthouse-based audits for performance, accessibility, security, content, and compatibility.
- 
- ```bash
- # Run performance audit (includes agentic-browsing category)
- npm run audit:performance
- 
- # Run accessibility audit
- npm run audit:accessibility
- 
- # Run security audit (npm audit)
- npm run audit:security
- 
- # Run content audit (manual step)
- npm run audit:content
- 
- # Run compatibility audit (manual step)
- npm run audit:compatibility
- 
- # Run all audits and tests together
- ./run-audits-tests.sh
- ```
-
-### Running All Tests
-
-To run the complete test suite:
-
-```bash
-npm test
-```
-
-This will run unit, integration, and (if a server is detected) end-to-end tests.
-
-## Test File Conventions
-
-### Unit Tests
-
-- Located in `tests/unit/`
-- File naming: `[module-name].test.js`
-- Example: `tests/unit/index.test.js`
-
-### Integration Tests
-
-- Located in `tests/integration/`
-- File naming: `[feature-name]-integration.test.js` or similar
-- Example: `tests/integration/globe-integration.test.js`
-
-### E2E Tests
-
-- Located in `tests/e2e/`
-- File naming: `[description].spec.cy.js` (Cypress convention)
-- Example: `tests/e2e/first_test.spec.cy.js`
-
-## Writing Tests
-
-### Unit Testing Tips
-
-- Mock external dependencies
-- Test edge cases and error conditions
-- Keep tests focused on a single unit of behavior
-- Use descriptive test names that explain what is being tested
-
-### Integration Testing Tips
-
-- Test interactions between multiple modules
-- Test DOM interactions and event handling
-- Test data flow through the system
-- Use realistic test data
-- Include content checks (e.g., no placeholder text, meta description present)
-- Include performance checks (e.g., no external stylesheets)
-- Include accessibility checks (e.g., skip link present, proper ARIA labels)
-- Include security checks (e.g., no inline event handlers)
-- Use the existing test suite as a guide for adding new tests
-  - Validate ARD (Agent Description Record) schemas (e.g., ai-catalog.json) using the Lighthouse ConformanceTester
-
-### E2E Testing Tips
-
-- Use data attributes (`data-cy` or `data-test`) for reliable selectors
-- Test user workflows from start to finish
-- Test error states and edge cases
-- Clean up state between tests when necessary
-
-## Continuous Integration
-
-In a CI environment, the test suite is typically run as follows:
-
-1. Install dependencies
-2. Start the application server (in background)
-3. Run unit and integration tests
-4. Run end-to-end tests against the running server
-5. Stop the server
-
-## Troubleshooting
-
-### "Cannot find module" errors
-
-Ensure you have installed all dependencies:
-```bash
-npm install
-```
-
-### Port already in use when starting server
-
-Choose a different port or kill the process using the port:
-```bash
-# Find process using port 8080
-lsof -ti:8080 | xargs kill -9 2>/dev/null || true
-```
-
-### Tests failing due to timing issues
-
-- Use Jest's fake timers for time-dependent code
-- In Cypress, use appropriate waiting commands (`cy.wait()`, interception, etc.)
-- Ensure async operations are properly awaited in tests
-
 
 ## Running Audits
 
-Meridian provides npm scripts to run various audits:
+Meridian includes Lighthouse-based audits for performance, accessibility, security, content, and compatibility.
 
-### Performance Audit
 ```bash
+# Run performance audit
 npm run audit:performance
-```
-Runs Lighthouse performance audit and outputs results to `./lighthouse-report.json`.
 
-### Accessibility Audit
-```bash
+# Run agentic browsing audit
+# Note: Agentic browsing audit requires special Lighthouse configuration.
+# See lighthouse-agentic-fixed2.json for reference results.
+
+# Run accessibility audit
 npm run audit:accessibility
-```
-Runs Lighthouse accessibility audit (only accessibility category) and outputs results to `./a11y-report.json`.
 
-### Security Audit
-```bash
+# Run security audit (npm audit)
 npm run audit:security
-```
-Runs `npm audit` to check for vulnerabilities.
 
-### Content Audit
-```bash
+# Run content audit (manual step)
 npm run audit:content
-```
-Manual step: review content for clarity, tone, and accuracy.
 
-### Compatibility Audit
-```bash
+# Run compatibility audit (manual step)
 npm run audit:compatibility
+
+# Run all audits (except content and compatibility which are manual)
+./run-audits-tests.sh
 ```
-Manual step: test across browsers and devices.
 
-There are also helper scripts that start the server, run the audit, and then stop the server:
-- `run-audit-accessibility.sh`
-- `run-audit-performance.sh`
-- `run-e2e.sh` (end-to-end tests)
-- `run-e2e-with-server.sh` (E2E with server startup)
-- `run-e2e-capture.sh` (E2E with capture)
+See [docs/AUDIT.md](docs/AUDIT.md) for the audit plan and [AUDIT-RESULTS.md](AUDIT-RESULTS.md) for the latest results.
 
-## Related Documentation
+## Lighthouse Audit Scripts
 
-- [Audit Plan](AUDIT.md) - Information about performance, accessibility, security, content, and compatibility audits
-- [Audit Results](AUDIT-RESULTS.md) - Latest audit scores and improvement history
-- [Contributing Guidelines](CONTRIBUTING.md) - Detailed contribution process
+The audit scripts automatically start the server before running Lighthouse to prevent interstitial errors:
+
+- `run-audit-performance.sh` - Starts server, runs performance audit, stops server
+- `run-audit-accessibility.sh` - Starts server, runs accessibility audit, stops server
