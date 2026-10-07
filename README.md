@@ -8,6 +8,18 @@ This repository is the durable source of truth for Meridian. Application source 
 
 Project is under development with source code, tests, and documentation.
 
+## Audit Status
+
+| Audit | Status | Score |
+|-------|--------|-------|
+| Performance | ✅ Passed | 100% |
+| Accessibility | ✅ Passed | 100% |
+| Security | ✅ Passed | 0 vulnerabilities |
+| Content | ✅ Passed | Manual review passed |
+| Compatibility | ✅ Passed | Manual review passed |
+
+*Last updated: 2026-10-06*
+
 ## Project Structure
 
 ```
@@ -74,3 +86,17 @@ See [docs/AUDIT.md](docs/AUDIT.md) for the audit plan and [AUDIT-RESULTS.md](AUD
 ## Related
 
 Owned by Ascend Maui (`ascendmaui/meridian`).
+
+## Continuous Integration
+
+This repository includes a GitHub Actions workflow that runs tests and audits on every push and pull request to the `main` and `develop` branches. The workflow:
+
+1. Sets up Node.js
+2. Installs dependencies
+3. Starts a local server
+4. Runs the full test suite (unit, integration, end-to-end)
+5. Runs performance and accessibility audits using Lighthouse
+6. Runs security audit via `npm audit`
+7. Notes manual steps for content and compatibility audits
+
+The workflow file is located at `.github/workflows/ci.yml`.

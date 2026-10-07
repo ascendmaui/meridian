@@ -60,7 +60,7 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(port);
+server.listen(port, "localhost");
 server.on("listening", () => {
   console.log(`Server running at http://localhost:${port}/`);
 });

@@ -120,3 +120,52 @@ Types:
 
 By contributing, you agree that your contributions will be licensed under the MIT License.
 
+
+## Continuous Integration
+
+This project uses GitHub Actions to run tests and audits on every push and pull request. The CI workflow includes:
+
+- Installing dependencies
+- Starting a local server
+- Running the test suite (unit, integration, end-to-end)
+- Running performance and accessibility audits with Lighthouse
+- Running security audit with `npm audit`
+- Manual checks for content and compatibility
+
+You can view the workflow at `.github/workflows/ci.yml`.
+
+## Running Audits Locally
+
+To run the audits locally, first start a server on port 8080:
+
+```bash
+# Option 1: Node.js server
+node server.js
+
+# Option 2: Python server
+python3 -m http.server 8080
+
+# Option 3: Any static file server
+```
+
+Then run the audit scripts:
+
+```bash
+# Performance audit
+npm run audit:performance
+
+# Accessibility audit
+npm run audit:accessibility
+
+# Security audit
+npm run audit:security
+
+# Content audit (manual step)
+npm run audit:content
+
+# Compatibility audit (manual step)
+npm run audit:compatibility
+```
+
+See the [Audit Plan](docs/AUDIT.md) for more details.
+
