@@ -1,0 +1,4 @@
+# Ignore markdown files
+*.md
+# Ignore backup files
+*.bak

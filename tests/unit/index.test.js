@@ -66,11 +66,11 @@ beforeEach(() => {
   documentGetElementByIdSpy.mockReturnValue(mockContainer);
   
   // Mock window.addEventListener
-  const windowAddEventListenerSpy = jest.spyOn(window, 'addEventListener');
+  const windowAddEventListenerSpy = jest.spyOn(window, 'addEventListener'); // eslint-disable-line
   
   // Mock window.requestAnimationFrame
   const windowRequestAnimationFrameSpy = jest.spyOn(window, 'requestAnimationFrame');
-  windowRequestAnimationFrameSpy.mockImplementation((cb) => {
+  windowRequestAnimationFrameSpy.mockImplementation(() => {
     // Do not call the callback to avoid infinite loop
     return 1; // return a requestId
   });
