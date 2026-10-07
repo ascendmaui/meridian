@@ -13,8 +13,8 @@
     "audit:performance": "lighthouse --output=json --output-path=./lighthouse-report.json http://localhost:8080",
     "audit:accessibility": "lighthouse --only-categories=accessibility --output=json --output-path=./a11y-report.json http://localhost:8080",
     "audit:security": "npm audit",
-    "audit:content": "echo \"Content audit manual step\"",
-    "audit:compatibility": "echo \"Compatibility audit manual step\"",
+    "audit:content": "node scripts/content-audit.js",
+    "audit:compatibility": "node scripts/compatibility-audit.js",
     "prepare": "husky install"
   },
   "keywords": [

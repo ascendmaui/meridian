@@ -83,10 +83,10 @@ Meridian includes Lighthouse-based audits for performance, accessibility, securi
 # Run security audit (npm audit)
 npm run audit:security
 
-# Run content audit (manual step)
+# Run content audit (automated via npm run audit:content)
 npm run audit:content
 
-# Run compatibility audit (manual step)
+# Run compatibility audit (automated via npm run audit:compatibility)
 npm run audit:compatibility
 
 # Run all audits (except content and compatibility which are manual)
