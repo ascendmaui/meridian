@@ -140,6 +140,7 @@ To run the audits locally, first start a server on port 8080:
 
 ```bash
 # Option 1: Node.js server
+   # You can also specify a custom port via PORT environment variable (e.g., PORT=3000 node server.js)
 node server.js
 
 # Option 2: Python server

@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const port = 8080;
+const port = parseInt(process.env.PORT || '8080', 10);
 
 const server = http.createServer((req, res) => {
   console.log(`${req.method} ${req.url} - ${req.headers["user-agent"] || "no ua"}`);

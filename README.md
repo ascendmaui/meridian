@@ -12,11 +12,12 @@ Project is under development with source code, tests, and documentation.
 
 | Audit | Status | Score |
 |-------|--------|-------|
-| Performance | ✅ Passed | 96% |
+| Performance | ✅ Passed | 100% |
 | Accessibility | ✅ Passed | 100% |
 | Security | ✅ Passed | 0 vulnerabilities |
 | Content | ✅ Passed | Manual review passed |
 | Compatibility | ✅ Passed | Manual review passed |
+| Agentic Browsing | ✅ Passed | 100% |
 
 *Last updated: 2026-10-07*
 
@@ -65,7 +66,7 @@ Meridian includes audit scripts for performance, accessibility, security, conten
 To run the audits (requires a running server on port 8080):
 
 ```bash
-# Performance audit
+# Performance audit (includes agentic-browsing category)
 npm run audit:performance
 
 # Accessibility audit

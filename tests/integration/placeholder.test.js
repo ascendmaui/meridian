@@ -30,5 +30,10 @@ describe('HTML File Contents', () => {
     expect(htmlContent).toMatch(/<link rel="icon"/);
   });
 
+  test('should have a globe placeholder element with loading text', () => {
+    expect(htmlContent).toMatch(/id="globe-placeholder"/);
+    expect(htmlContent).toMatch(/Loading globe visualization.../);
+  });
+
 });
 

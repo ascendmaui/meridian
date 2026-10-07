@@ -37,15 +37,22 @@ This document outlines the audit areas for the Meridian interactive globe experi
    - WebGL support (fallback for older devices)
    - Performance on low-end devices
 
+6. **Agentic Browsing (ARD Schema)**
+   - AI Resource Catalog (ai-catalog.json) validity
+   - Agent Description Record (ARD) specification compliance
+   - Discovery by AI agents and registries
+   - Proper metadata for AI resource discovery
+
 ## Audit Checklist
 - [ ] Performance benchmarks met
 - [ ] Accessibility guidelines followed (WCAG 2.1 AA)
 - [ ] Security scan passed
 - [ ] Content verified by subject matter expert
 - [ ] Tested on target browsers and devices
+- [ ] ARD schema validation passed
 
 ## Tools
-- Lighthouse for performance and accessibility
+- Lighthouse for performance, accessibility, and agentic browsing
 - OWASP ZAP for security
 - WebPageTest for performance benchmarks
 - Manual testing for content and compatibility
@@ -75,7 +82,7 @@ This document outlines the audit areas for the Meridian interactive globe experi
 ## Templates
 ### Issue Report Template
 **ID**: [Unique identifier]
-**Area**: [Performance/Accessibility/Security/Content/Compatibility]
+**Area**: [Performance/Accessibility/Security/Content/Compatibility/Agentic Browsing]
 **Description**: [Detailed description of the issue]
 **Steps to Reproduce**:
 1. [Step 1]

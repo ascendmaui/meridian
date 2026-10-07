@@ -89,7 +89,7 @@ E2e tests require a running instance of the application. Before running E2e test
 Meridian includes Lighthouse-based audits for performance, accessibility, security, content, and compatibility.
 
 ```bash
-# Run performance audit
+# Run performance audit (includes agentic-browsing category)
 npm run audit:performance
 
 # Run accessibility audit
