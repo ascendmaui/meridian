@@ -66,16 +66,19 @@ E2e tests require a running instance of the application. Before running E2e test
 
 Meridian includes Lighthouse-based audits for performance, accessibility, security, content, and compatibility.
 
+**Note:** For performance and accessibility audits, it is recommended to use the provided shell scripts that automatically start and stop the server to prevent interstitial errors. For security, content, and compatibility audits, the npm scripts can be used as shown.
+
 ```bash
-# Run performance audit
-npm run audit:performance
+# Run performance audit (recommended: uses script that starts/stops server)
+./run-audit-performance.sh
+
+# Run accessibility audit (recommended: uses script that starts/stops server)
+./run-audit-accessibility.sh
 
 # Run agentic browsing audit
 # Note: Agentic browsing audit requires special Lighthouse configuration.
 # See lighthouse-agentic-fixed2.json for reference results.
-
-# Run accessibility audit
-npm run audit:accessibility
+# You can run it manually with: lighthouse --only-categories=--output=json --output-path=./lighthouse-agentic-fixed.json http://localhost:8080
 
 # Run security audit (npm audit)
 npm run audit:security

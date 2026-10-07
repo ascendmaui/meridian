@@ -52,12 +52,12 @@ This document outlines the audit areas for the Meridian interactive globe experi
 - [ ] ARD schema validation passed
 
 ## Tools
-- Lighthouse for performance, accessibility, and agentic browsing
+- Lighthouse for performance, accessibility, and agentic browsing (using provided scripts that automate server startup)
 - OWASP ZAP for security
 - WebPageTest for performance benchmarks
 - Manual testing for content and compatibility
 - Automated testing framework (Jest, Cypress, etc.) for regression
-
+- Custom shell scripts: `run-audit-performance.sh`, `run-audit-accessibility.sh`, `run-audits-tests.sh`
 ## Audit Procedures
 1. **Pre-audit Setup**
    - Define audit scope and criteria
