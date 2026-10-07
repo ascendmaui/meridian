@@ -1,8 +1,34 @@
-// Integration tests placeholder
-// Add integration tests for globe features (e.g., data loading, user interactions)
+// Integration tests for Meridian globe experience
+// Tests that require parsing the HTML file
 
-describe('Integration tests', () => {
-  test('placeholder', () => {
-    expect(true).toBe(true);
+const fs = require('fs');
+const path = require('path');
+
+describe('HTML File Contents', () => {
+  let htmlContent;
+
+  beforeAll(() => {
+    const htmlPath = path.resolve(__dirname, '../../index.html');
+    htmlContent = fs.readFileSync(htmlPath, 'utf8');
   });
+
+  test('should have a title tag with correct text', () => {
+    expect(htmlContent).toMatch(/<title>Meridian Globe<\/title>/);
+  });
+
+  test('should not contain Lorem Ipsum placeholder text', () => {
+    expect(htmlContent).not.toMatch(/Lorem Ipsum/i);
+    expect(htmlContent).not.toMatch(/lorem ipsum/i);
+  });
+
+  test('should not contain todo or FIXME placeholders', () => {
+    expect(htmlContent).not.toMatch(/todo/i);
+    expect(htmlContent).not.toMatch(/fixme/i);
+  });
+
+  test('should have a favicon link', () => {
+    expect(htmlContent).toMatch(/<link rel="icon"/);
+  });
+
 });
+

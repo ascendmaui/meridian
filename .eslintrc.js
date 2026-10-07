@@ -7,6 +7,23 @@ module.exports = {
   globals: {
     THREE: true, // Three.js library loaded via CDN
   },
+  overrides: [
+    {
+      files: ['tests/e2e/**/*.cy.js'],
+      env: {
+        mocha: true,
+      },
+      globals: {
+        cy: true,
+      },
+    },
+    {
+      files: ['tests/**/*.js', '!tests/e2e/**/*.cy.js'],
+      env: {
+        jest: true,
+      },
+    },
+  ],
   extends: 'eslint:recommended',
   parserOptions: {
     ecmaVersion: 12,
