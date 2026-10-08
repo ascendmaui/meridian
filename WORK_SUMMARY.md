@@ -1,1 +1,1 @@
-Draft-PR audit work completed. All tests pass, audits pass, documentation updated.
+Draft-PR audit work updated CI workflow to use recommended shell scripts for performance, accessibility, and agentic browsing audits. This aligns with README recommendations and prevents interstitial errors during audit execution. All tests pass.
