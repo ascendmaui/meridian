@@ -75,10 +75,8 @@ Meridian includes Lighthouse-based audits for performance, accessibility, securi
 # Run accessibility audit (recommended: uses script that starts/stops server)
 ./run-audit-accessibility.sh
 
-# Run agentic browsing audit
-# Note: Agentic browsing audit requires special Lighthouse configuration.
-# See lighthouse-agentic-fixed2.json for reference results.
-# You can run it manually with: lighthouse --only-categories=--output=json --output-path=./lighthouse-agentic-fixed.json http://localhost:8080
+# Run agentic browsing audit (recommended: uses script that starts/stops server)
+./run-audit-agentic.sh
 
 # Run security audit (npm audit)
 npm run audit:security
@@ -101,3 +99,4 @@ The audit scripts automatically start the server before running Lighthouse to pr
 
 - `run-audit-performance.sh` - Starts server, runs performance audit, stops server
 - `run-audit-accessibility.sh` - Starts server, runs accessibility audit, stops server
+- `run-audit-agentic.sh` - Starts server, runs agentic browsing audit, stops server
