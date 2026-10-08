@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 console.log('Server script starting');
 const port = parseInt(process.env.PORT || '8080', 10);
+const zlib = require('zlib');
 
 const server = http.createServer((req, res) => {
   try {
@@ -12,6 +13,11 @@ const server = http.createServer((req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    // Security headers
+    res.setHeader("X-Content-Type-Options", "nosniff");
+    res.setHeader("X-Frame-Options", "SAMEORIGIN");
+    res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+    res.setHeader("Permissions-Policy", "geolocation=(), microphone=(), camera=()");
     
     // Handle preflight requests
     if (req.method === 'OPTIONS') {
@@ -63,8 +69,26 @@ const server = http.createServer((req, res) => {
         }
       } else {
         // Success
-        res.writeHead(200, { 'Content-Type': contentType });
-        res.end(content, 'utf8');
+        // Check if we should compress
+        const acceptEncoding = req.headers['accept-encoding'];
+        if (acceptEncoding && acceptEncoding.includes('gzip') && 
+            [ 'text/html', 'text/css', 'application/javascript', 'application/json' ].includes(contentType)) {
+          // Compress the content
+          zlib.gzip(content, (err, compressedContent) => {
+            if (err) {
+              console.error('Gzip compression failed:', err);
+              res.writeHead(200, { 'Content-Type': contentType });
+              res.end(content, 'utf8');
+            } else {
+              res.setHeader('Content-Encoding', 'gzip');
+              res.writeHead(200, { 'Content-Type': contentType });
+              res.end(compressedContent, 'binary');
+            }
+          });
+        } else {
+          res.writeHead(200, { 'Content-Type': contentType });
+          res.end(content, 'utf8');
+        }
       }
     });
   } catch (err) {
