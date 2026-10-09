@@ -28,7 +28,7 @@ if [ $ELAPSED -ge $TIMEOUT ]; then
 fi
 
 # Run agentic browsing audit
-npm run audit:agentic
+npx lighthouse --only-categories=agentic-browsing --output=json --output-path=./lighthouse-agentic.json http://localhost:8080
 EXIT_CODE=$?
 
 # Kill the server

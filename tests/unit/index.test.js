@@ -17,6 +17,8 @@ const mockTHREE = {
       position: {
         set: jest.fn(),
       },
+      aspect: 0, // will be set in initGlobe
+      updateProjectionMatrix: jest.fn(),
     };
   }),
   WebGLRenderer: jest.fn().mockImplementation(() => {
@@ -322,6 +324,72 @@ describe('initGlobe', () => {
     // Check that the renderer was set to default size (800x600)
     const rendererInstance = mockTHREE.WebGLRenderer.mock.results[0].value;
     expect(rendererInstance.setSize).toHaveBeenCalledWith(800, 600);
+
+    // Restore mocks
+    documentGetElementByIdSpy.mockRestore();
+    windowAddEventListenerSpy.mockRestore();
+    windowRequestAnimationFrameSpy.mockRestore();
+    jest.restoreAllMocks();
+  });
+  test('should call resize handler when window is resized', () => {
+    // Mock container with initial size
+    const mockContainer = {
+      clientWidth: 800,
+      clientHeight: 600,
+      appendChild: jest.fn(),
+    };
+
+    // Mock document.getElementById to return our container
+    const documentGetElementByIdSpy = jest.spyOn(document, 'getElementById');
+    documentGetElementByIdSpy.mockReturnValue(mockContainer);
+
+    // Mock window.addEventListener to capture the resize handler
+    const windowAddEventListenerSpy = jest.spyOn(window, 'addEventListener');
+    let resizeHandler = null;
+    windowAddEventListenerSpy.mockImplementation((event, callback) => {
+      if (event === 'resize') {
+        resizeHandler = callback;
+      }
+    });
+
+    // Mock window.requestAnimationFrame to prevent infinite loop
+    const windowRequestAnimationFrameSpy = jest.spyOn(window, 'requestAnimationFrame');
+    windowRequestAnimationFrameSpy.mockImplementation(() => {
+      return 1; // return a requestId
+    });
+
+    // Mock THREE global
+    global.THREE = mockTHREE;
+
+    // Mock console
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+
+    // Import and initialize
+    const { initGlobe } = require('../../src/index');
+    initGlobe();
+
+    // Verify resize handler was registered
+    expect(windowAddEventListenerSpy).toHaveBeenCalledWith('resize', expect.any(Function));
+    expect(resizeHandler).toBeInstanceOf(Function);
+
+    // Update container size to simulate resize
+    mockContainer.clientWidth = 1024;
+    mockContainer.clientHeight = 768;
+
+    // Call the resize handler
+    resizeHandler();
+
+    // Verify camera aspect was updated
+    const perspectiveCameraInstance = mockTHREE.PerspectiveCamera.mock.results[0].value;
+    expect(perspectiveCameraInstance.aspect).toBe(1024 / 768);
+
+    // Verify updateProjectionMatrix was called
+    expect(perspectiveCameraInstance.updateProjectionMatrix).toHaveBeenCalled();
+
+    // Verify renderer setSize was called with new dimensions
+    const rendererInstance = mockTHREE.WebGLRenderer.mock.results[0].value;
+    expect(rendererInstance.setSize).toHaveBeenCalledWith(1024, 768);
 
     // Restore mocks
     documentGetElementByIdSpy.mockRestore();
