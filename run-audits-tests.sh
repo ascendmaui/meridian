@@ -11,8 +11,8 @@ echo "Checking for existing processes on port $SERVER_PORT..."
 lsof -ti:$SERVER_PORT | xargs kill -9 2>/dev/null || true
 
 # Start server in background
-echo "Starting test server..."
-node test-server.js &
+echo "Starting server..."
+node server.js &
 SERVER_PID=$!
 echo "Server started with PID $SERVER_PID"
 
@@ -35,8 +35,8 @@ done
 if [ "$SERVER_READY" = false ]; then
   echo "Error: Server failed to start after $MAX_STARTUP_ATTEMPTS attempts"
   echo "Checking server logs:"
-  if [ -f test-server.log ]; then
-    tail -10 test-server.log
+  if [ -f server.log ]; then
+    tail -10 server.log
   fi
   kill $SERVER_PID 2>/dev/null || true
   wait $SERVER_PID 2>/dev/null || true
