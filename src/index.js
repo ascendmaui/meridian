@@ -42,7 +42,7 @@ function initGlobe() {
   container.appendChild(renderer.domElement);
 
   // Create sphere (globe)
-  const geometry = new THREE.SphereGeometry(1, 32, 32);
+  const geometry = new THREE.SphereGeometry(1, 16, 16);
   const material = new THREE.MeshStandardMaterial({
     color: 0x00bfff,
     metalness: 0.2,
