@@ -1,0 +1,400 @@
+// Mock DOM and Three.js before importing the module
+const mockContainer = {
+  clientWidth: 800,
+  clientHeight: 600,
+  appendChild: jest.fn(),
+};
+
+const mockTHREE = {
+  Scene: jest.fn().mockImplementation(() => {
+    return {
+      background: null,
+      add: jest.fn(),
+    };
+  }),
+  PerspectiveCamera: jest.fn().mockImplementation(() => {
+    return {
+      position: {
+        set: jest.fn(),
+      },
+      aspect: 0, // will be set in initGlobe
+      updateProjectionMatrix: jest.fn(),
+    };
+  }),
+  WebGLRenderer: jest.fn().mockImplementation(() => {
+    return {
+      setSize: jest.fn(),
+      domElement: {},
+      render: jest.fn(),
+    };
+  }),
+  SphereGeometry: jest.fn().mockImplementation(() => {
+    return {};
+  }),
+  MeshStandardMaterial: jest.fn().mockImplementation(() => {
+    return {};
+  }),
+  Mesh: jest.fn().mockImplementation((geometry, material) => {
+    return {
+      geometry,
+      material,
+      rotation: { y: 0 },
+    };
+  }),
+  DirectionalLight: jest.fn().mockImplementation(() => {
+    return {
+      position: {
+        set: jest.fn(),
+      },
+    };
+  }),
+  AmbientLight: jest.fn().mockImplementation(() => {
+    return {};
+  }),
+  Color: jest.fn().mockImplementation((color) => {
+    // Return a mock object that represents a color
+    return { color };
+  }),
+};
+
+let initGlobe;
+
+beforeEach(() => {
+  jest.resetModules();
+  jest.clearAllMocks();
+  
+  // Mock document.getElementById
+  const documentGetElementByIdSpy = jest.spyOn(document, 'getElementById');
+  documentGetElementByIdSpy.mockReturnValue(mockContainer);
+  
+  // Mock window.addEventListener
+  const windowAddEventListenerSpy = jest.spyOn(window, 'addEventListener'); // eslint-disable-line
+  
+  // Mock window.requestAnimationFrame
+  const windowRequestAnimationFrameSpy = jest.spyOn(window, 'requestAnimationFrame');
+  windowRequestAnimationFrameSpy.mockImplementation(() => {
+    // Do not call the callback to avoid infinite loop
+    return 1; // return a requestId
+  });
+  
+  // Mock THREE global
+  global.THREE = mockTHREE;
+  
+  if (typeof global.THREE === 'undefined') {
+    throw new Error('THREE is undefined');
+  }
+
+  // Mock console
+  jest.spyOn(console, 'log').mockImplementation(() => {});
+  jest.spyOn(console, 'error').mockImplementation(() => {});
+
+  // Now import the module
+  initGlobe = require('../../src/index').initGlobe;
+});
+
+afterEach(() => {
+  jest.restoreAllMocks();
+});
+
+describe('initGlobe', () => {
+  test('should log initialization message', () => {
+    initGlobe();
+    expect(console.log).toHaveBeenCalledWith('Meridian globe experience initialized');
+  });
+
+  test('should be a function', () => {
+    expect(typeof initGlobe).toBe('function');
+  });
+
+  test('should create a scene when Three.js is available', () => {
+    initGlobe();
+    expect(mockTHREE.Scene).toHaveBeenCalled();
+  });
+
+  test('should create a camera', () => {
+    initGlobe();
+    expect(mockTHREE.PerspectiveCamera).toHaveBeenCalled();
+  });
+
+  test('should create a renderer and set its size', () => {
+    initGlobe();
+    expect(mockTHREE.WebGLRenderer).toHaveBeenCalled();
+    const rendererInstance = mockTHREE.WebGLRenderer.mock.results[0].value;
+    expect(rendererInstance.setSize).toHaveBeenCalledWith(800, 600);
+  });
+
+  test('should append the renderer domElement to the container', () => {
+    initGlobe();
+    expect(mockContainer.appendChild).toHaveBeenCalled();
+  });
+
+  test('should handle window resize event', () => {
+    initGlobe();
+    expect(window.addEventListener).toHaveBeenCalledWith('resize', expect.any(Function));
+  });
+
+  test('should not throw when Three.js is undefined', () => {
+    // Set THREE to undefined
+    const originalTHREE = global.THREE;
+    global.THREE = undefined;
+    expect(() => {
+      initGlobe();
+    }).not.toThrow();
+    global.THREE = originalTHREE;
+  });
+
+  // Additional tests to check internal calls
+  test('should set scene background color', () => {
+    initGlobe();
+    const sceneInstance = mockTHREE.Scene.mock.results[0].value;
+    expect(sceneInstance.background).toEqual({ color: 0x87ceeb });
+  });
+
+  test('should set camera position', () => {
+    initGlobe();
+    const cameraInstance = mockTHREE.PerspectiveCamera.mock.results[0].value;
+    expect(cameraInstance.position.set).toHaveBeenCalledWith(0, 0, 5);
+  });
+
+  test('should create a sphere geometry', () => {
+    initGlobe();
+    expect(mockTHREE.SphereGeometry).toHaveBeenCalled();
+  });
+
+  test('should create a mesh material', () => {
+    initGlobe();
+    expect(mockTHREE.MeshStandardMaterial).toHaveBeenCalled();
+  });
+
+  test('should create a mesh with geometry and material', () => {
+    initGlobe();
+    const geometryInstance = mockTHREE.SphereGeometry.mock.results[0].value;
+    const materialInstance = mockTHREE.MeshStandardMaterial.mock.results[0].value;
+    expect(mockTHREE.Mesh).toHaveBeenCalledWith(geometryInstance, materialInstance);
+  });
+
+  test('should add mesh to scene', () => {
+    initGlobe();
+    const sceneInstance = mockTHREE.Scene.mock.results[0].value;
+    expect(sceneInstance.add).toHaveBeenCalled();
+  });
+
+  test('should add directional light to scene', () => {
+    initGlobe();
+    const sceneInstance = mockTHREE.Scene.mock.results[0].value;
+    expect(sceneInstance.add).toHaveBeenCalled();
+  });
+
+  test('should add ambient light to scene', () => {
+    initGlobe();
+    const sceneInstance = mockTHREE.Scene.mock.results[0].value;
+    expect(sceneInstance.add).toHaveBeenCalled();
+  });
+
+  test('should set directional light position', () => {
+    initGlobe();
+    const lightInstance = mockTHREE.DirectionalLight.mock.results[0].value;
+    expect(lightInstance.position.set).toHaveBeenCalledWith(5, 5, 5);
+  });
+  test('should log error and return when container element is not found', () => {
+    // Mock document.getElementById to return null
+    const documentGetElementByIdSpy = jest.spyOn(document, 'getElementById');
+    documentGetElementByIdSpy.mockReturnValue(null);
+    
+    // Mock console.error
+    const consoleErrorSpy = jest.spyOn(console, 'error');
+    
+    initGlobe();
+    
+    expect(consoleErrorSpy).toHaveBeenCalledWith('Globe container element not found');
+    
+    // Restore the mock
+    documentGetElementByIdSpy.mockRestore();
+    consoleErrorSpy.mockRestore();
+  });
+
+  test('should not create Three.js objects when Three.js is undefined', () => {
+    // Set THREE to undefined
+    const originalTHREE = global.THREE;
+    global.THREE = undefined;
+    
+    // Mock console.warn
+    const consoleWarnSpy = jest.spyOn(console, 'warn');
+    
+    initGlobe();
+    
+    expect(consoleWarnSpy).toHaveBeenCalledWith('Three.js not found, globe visualization disabled');
+    
+    // Verify no Three.js objects were created
+    expect(mockTHREE.Scene).not.toHaveBeenCalled();
+    expect(mockTHREE.PerspectiveCamera).not.toHaveBeenCalled();
+    expect(mockTHREE.WebGLRenderer).not.toHaveBeenCalled();
+    
+    // Restore
+    global.THREE = originalTHREE;
+    consoleWarnSpy.mockRestore();
+  });
+
+  test('should call requestAnimationFrame for animation loop', () => {
+    // Mock requestAnimationFrame to capture the callback
+    const mockRequestAnimationFrame = jest.spyOn(window, 'requestAnimationFrame');
+    let animationCallback = null;
+    let sphereInstance = null;
+    
+    // Mock THREE.Mesh to capture the instance
+    mockTHREE.Mesh.mockImplementation((geometry, material) => {
+      const instance = {
+        geometry,
+        material,
+        rotation: { y: 0 },
+      };
+      sphereInstance = instance;
+      return instance;
+    });
+    
+    mockRequestAnimationFrame.mockImplementation((cb) => {
+      animationCallback = cb;
+      return 1; // return a requestId
+    });
+    
+    initGlobe();
+    
+    expect(mockRequestAnimationFrame).toHaveBeenCalled();
+    expect(typeof animationCallback).toBe('function');
+    expect(sphereInstance).not.toBeNull();
+    
+    // Store initial rotation
+    const initialRotation = sphereInstance.rotation.y;
+    
+    // Call the animation callback
+    expect(() => {
+      animationCallback();
+    }).not.toThrow();
+    
+    // Verify that the rotation has changed
+    expect(sphereInstance.rotation.y).toBeGreaterThan(initialRotation);
+    
+    mockRequestAnimationFrame.mockRestore();
+  });
+  test('should handle zero width or height container', () => {
+    // Mock container with zero width and height
+    const mockContainerZero = {
+      clientWidth: 0,
+      clientHeight: 0,
+      appendChild: jest.fn(),
+    };
+
+    // Mock document.getElementById to return our zero-sized container
+    const documentGetElementByIdSpy = jest.spyOn(document, 'getElementById');
+    documentGetElementByIdSpy.mockReturnValue(mockContainerZero);
+
+    // Mock window.addEventListener
+    const windowAddEventListenerSpy = jest.spyOn(window, 'addEventListener'); // eslint-disable-line
+
+    // Mock window.requestAnimationFrame
+    const windowRequestAnimationFrameSpy = jest.spyOn(window, 'requestAnimationFrame');
+    windowRequestAnimationFrameSpy.mockImplementation(() => {
+      // Do not call the callback to avoid infinite loop
+      return 1; // return a requestId
+    });
+
+    // Mock THREE global
+    global.THREE = mockTHREE;
+
+    // Mock console
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+
+    // Now import the module
+    const { initGlobe } = require('../../src/index');
+
+    // Expect no throw
+    expect(() => {
+      initGlobe();
+    }).not.toThrow();
+
+    // Check that the camera was created with default aspect ratio (800/600 = 4/3)
+    expect(mockTHREE.PerspectiveCamera).toHaveBeenCalledWith(
+      75, // field of view
+      800 / 600, // aspect ratio
+      0.1, // near clipping plane
+      1000 // far clipping plane
+    );
+
+    // Check that the renderer was set to default size (800x600)
+    const rendererInstance = mockTHREE.WebGLRenderer.mock.results[0].value;
+    expect(rendererInstance.setSize).toHaveBeenCalledWith(800, 600);
+
+    // Restore mocks
+    documentGetElementByIdSpy.mockRestore();
+    windowAddEventListenerSpy.mockRestore();
+    windowRequestAnimationFrameSpy.mockRestore();
+    jest.restoreAllMocks();
+  });
+  test('should call resize handler when window is resized', () => {
+    // Mock container with initial size
+    const mockContainer = {
+      clientWidth: 800,
+      clientHeight: 600,
+      appendChild: jest.fn(),
+    };
+
+    // Mock document.getElementById to return our container
+    const documentGetElementByIdSpy = jest.spyOn(document, 'getElementById');
+    documentGetElementByIdSpy.mockReturnValue(mockContainer);
+
+    // Mock window.addEventListener to capture the resize handler
+    const windowAddEventListenerSpy = jest.spyOn(window, 'addEventListener');
+    let resizeHandler = null;
+    windowAddEventListenerSpy.mockImplementation((event, callback) => {
+      if (event === 'resize') {
+        resizeHandler = callback;
+      }
+    });
+
+    // Mock window.requestAnimationFrame to prevent infinite loop
+    const windowRequestAnimationFrameSpy = jest.spyOn(window, 'requestAnimationFrame');
+    windowRequestAnimationFrameSpy.mockImplementation(() => {
+      return 1; // return a requestId
+    });
+
+    // Mock THREE global
+    global.THREE = mockTHREE;
+
+    // Mock console
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+
+    // Import and initialize
+    const { initGlobe } = require('../../src/index');
+    initGlobe();
+
+    // Verify resize handler was registered
+    expect(windowAddEventListenerSpy).toHaveBeenCalledWith('resize', expect.any(Function));
+    expect(resizeHandler).toBeInstanceOf(Function);
+
+    // Update container size to simulate resize
+    mockContainer.clientWidth = 1024;
+    mockContainer.clientHeight = 768;
+
+    // Call the resize handler
+    resizeHandler();
+
+    // Verify camera aspect was updated
+    const perspectiveCameraInstance = mockTHREE.PerspectiveCamera.mock.results[0].value;
+    expect(perspectiveCameraInstance.aspect).toBe(1024 / 768);
+
+    // Verify updateProjectionMatrix was called
+    expect(perspectiveCameraInstance.updateProjectionMatrix).toHaveBeenCalled();
+
+    // Verify renderer setSize was called with new dimensions
+    const rendererInstance = mockTHREE.WebGLRenderer.mock.results[0].value;
+    expect(rendererInstance.setSize).toHaveBeenCalledWith(1024, 768);
+
+    // Restore mocks
+    documentGetElementByIdSpy.mockRestore();
+    windowAddEventListenerSpy.mockRestore();
+    windowRequestAnimationFrameSpy.mockRestore();
+    jest.restoreAllMocks();
+  });
+});
