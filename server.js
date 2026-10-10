@@ -97,8 +97,7 @@ const server = http.createServer((req, res) => {
     res.end('Internal Server Error', 'utf8');
   }
 });
-server.listen(port, "0.0.0.0");
-server.listen(port, "::");
+server.listen(port);
 server.on("listening", () => {
   console.log(`Server running at http://localhost:${port}/`);
 });
