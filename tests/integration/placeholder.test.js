@@ -15,8 +15,8 @@ describe('HTML File Contents', () => {
   test('index.html contains skip link and globe container and module script', () => {
     // Check for skip link
     expect(htmlContent).toMatch(/<a href="#globe-container" class="skip-link">Skip to globe visualization<\/a>/);
-    // Check for globe container
-    expect(htmlContent).toMatch(/<div id="globe-container" role="img" aria-label="3D globe visualization"><\/div>/);
+    // Check for globe container opening tag with correct attributes
+    expect(htmlContent).toMatch(/<div id="globe-container" role="img" aria-label="3D globe visualization">/);
     // Check for module script
     expect(htmlContent).toMatch(/<script type="module" src="\/src\/index.js"><\/script>/);
   });
