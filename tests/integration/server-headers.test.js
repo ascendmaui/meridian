@@ -1,6 +1,8 @@
 // Integration tests for server headers and compression
 const http = require('http');
 const { handleRequest } = require('../../server');
+const fs = require('fs');
+const path = require('path');
 
 describe('Server Headers', () => {
   let testServer;
@@ -133,4 +135,29 @@ describe('Server Headers', () => {
       done();
     });
   });
+
+  test('should not compress response for ineligible content types (e.g., text/plain)', (done) => {
+    // First, we need to create a .txt file in the server directory for the test
+    const txtPath = path.join(__dirname, '../../test.txt');
+    fs.writeFileSync(txtPath, 'This is a test text file.', 'utf8');
+    
+    try {
+      makeRequest('/test.txt', (err, res, data) => {
+        expect(err).toBeNull();
+        expect(res.statusCode).toBe(200);
+        // Without accept-encoding gzip, there should be no content-encoding header
+        expect(res.headers['content-encoding']).toBeUndefined();
+        // Clean up
+        fs.unlinkSync(txtPath);
+        done();
+      });
+    } catch (err) {
+      // Clean up in case of error
+      if (fs.existsSync(txtPath)) {
+        fs.unlinkSync(txtPath);
+      }
+      throw err;
+    }
+  });
+
 });

@@ -4,6 +4,7 @@
   "description": "Hosted interactive globe experience",
   "main": "src/index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "jest",
     "test:unit": "jest --testPathPatterns=unit/",
     "test:integration": "jest --testPathPatterns=integration/",
@@ -25,7 +26,8 @@
   "author": "Ascend Maui",
   "license": "MIT",
   "devDependencies": {
-    "@babel/preset-env": "^7.29.7",
+    "@babel/core": "^8.0.7",
+    "@babel/preset-env": "^8.0.7",
     "cypress": "^16.1.1",
     "eslint": "^10.12.0",
     "globals": "^17.13.0",
