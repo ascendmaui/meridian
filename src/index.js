@@ -3,9 +3,9 @@
 
 /**
  * Initialize the globe experience
- * @returns {void}
+ * @returns {Promise<void>}
  */
-function initGlobe() {
+async function initGlobe() {
   console.log('Meridian globe experience initialized');
   
   // Check if Three.js is available
@@ -21,9 +21,15 @@ function initGlobe() {
     return;
   }
 
+  // Yield to browser after initial setup
+  await yieldToBrowser();
+
   // Create scene
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x87ceeb); // Sky blue
+
+  // Yield to browser
+  await yieldToBrowser();
 
   // Create camera
   const width = container.clientWidth || 800;
@@ -36,10 +42,16 @@ function initGlobe() {
   );
   camera.position.set(0, 0, 5);
 
+  // Yield to browser
+  await yieldToBrowser();
+
   // Create renderer
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(width, height);
   container.appendChild(renderer.domElement);
+
+  // Yield to browser
+  await yieldToBrowser();
 
   // Create sphere (globe)
   const geometry = new THREE.SphereGeometry(1, 16, 16);
@@ -51,13 +63,22 @@ function initGlobe() {
   const sphere = new THREE.Mesh(geometry, material);
   scene.add(sphere);
 
+  // Yield to browser
+  await yieldToBrowser();
+
   // Add lights
   const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
   directionalLight.position.set(5, 5, 5);
   scene.add(directionalLight);
 
+  // Yield to browser
+  await yieldToBrowser();
+
   const ambientLight = new THREE.AmbientLight(0x404040, 0.5);
   scene.add(ambientLight);
+
+  // Yield to browser
+  await yieldToBrowser();
 
   // Animation loop
   function animate() {
@@ -81,9 +102,22 @@ function initGlobe() {
   window.addEventListener('resize', onWindowResize);
 }
 
+// Helper function to yield to browser using requestAnimationFrame
+function yieldToBrowser() {
+  return new Promise(resolve => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(resolve);
+    });
+  });
+}
+
 // If running in browser, initialize on load
 if (typeof window !== 'undefined') {
-  window.addEventListener('load', initGlobe);
+  window.addEventListener('load', () => {
+    initGlobe().catch(err => {
+      console.error('Failed to initialize globe:', err);
+    });
+  });
 }
 
 // Export for use in other environments (e.g., Node.js for SSR)
