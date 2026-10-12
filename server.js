@@ -1,11 +1,14 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-console.log('Server script starting');
-const port = parseInt(process.env.PORT || '8080', 10);
 const zlib = require('zlib');
 
-const server = http.createServer((req, res) => {
+/**
+ * Request handler for the Meridian server
+ * @param {http.IncomingMessage} req
+ * @param {http.ServerResponse} res
+ */
+function handleRequest(req, res) {
   try {
     console.log(`${req.method} ${req.url} - ${req.headers["user-agent"] || "no ua"}`);
     
@@ -96,17 +99,25 @@ const server = http.createServer((req, res) => {
     res.writeHead(500);
     res.end('Internal Server Error', 'utf8');
   }
-});
-server.listen(port, "0.0.0.0");
-server.listen(port, "::");
-server.on("listening", () => {
-  console.log(`Server running at http://localhost:${port}/`);
-});
-server.on("error", (err) => {
-  console.error("Server error:", err);
-});
+}
 
-process.on('uncaughtException', (err) => {
-  console.error('Uncaught Exception:', err);
-  process.exit(1);
-});
+// Create HTTP server
+const server = http.createServer(handleRequest);
+
+// Determine port from environment variable or default
+const port = parseInt(process.env.PORT || '8080', 10);
+
+// Start server only if this file is run directly (not imported as module)
+if (require.main === module) {
+  server.listen(port, "0.0.0.0");
+  server.listen(port, "::");
+  server.on("listening", () => {
+    console.log(`Server running at http://localhost:${port}/`);
+  });
+  server.on("error", (err) => {
+    console.error("Server error:", err);
+  });
+}
+
+// Export the request handler for testing
+module.exports = { handleRequest, server };
