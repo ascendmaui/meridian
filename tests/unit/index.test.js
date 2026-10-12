@@ -68,7 +68,7 @@ beforeEach(() => {
   documentGetElementByIdSpy.mockReturnValue(mockContainer);
   
   // Mock window.addEventListener
-  const windowAddEventListenerSpy = jest.spyOn(window, 'addEventListener'); // eslint-disable-line
+  const windowAddEventListenerSpy = jest.spyOn(window, 'addEventListener');
   
   // Mock window.requestAnimationFrame
   const windowRequestAnimationFrameSpy = jest.spyOn(window, 'requestAnimationFrame');
@@ -289,7 +289,7 @@ describe('initGlobe', () => {
     documentGetElementByIdSpy.mockReturnValue(mockContainerZero);
 
     // Mock window.addEventListener
-    const windowAddEventListenerSpy = jest.spyOn(window, 'addEventListener'); // eslint-disable-line
+    const windowAddEventListenerSpy = jest.spyOn(window, 'addEventListener');
 
     // Mock window.requestAnimationFrame
     const windowRequestAnimationFrameSpy = jest.spyOn(window, 'requestAnimationFrame');
