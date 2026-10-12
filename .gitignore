@@ -23,3 +23,10 @@ test-server-*.js
 lighthouse-*.json
 !lighthouse-report.json
 !a11y-report.json
+
+# Additional ignore patterns for audit artifacts
+*.out
+*.pid
+*.bak2
+server-test.js
+update_summary.md
