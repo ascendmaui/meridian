@@ -46,6 +46,26 @@ Feature requests are welcome! Please open an issue with:
 - Add tests for new functionality
 - Ensure all tests pass before submitting
 
+#### Draft Pull Requests
+
+Draft pull requests are used for work-in-progress changes and undergo the same checks as regular pull requests:
+
+1. **Automated Checks**: All draft PRs trigger the CI workflow which runs:
+   - Test suite (unit, integration, end-to-end)
+   - Performance audit (Lighthouse)
+   - Accessibility audit (Lighthouse)
+   - Agentic browsing audit (Lighthouse)
+   - Security audit (`npm audit`)
+   - Linting checks
+
+2. **Review Process**: Draft PRs should be reviewed for:
+   - Code quality and adherence to style guidelines
+   - Test coverage for new functionality
+   - Documentation updates where needed
+   - Potential performance or accessibility impacts
+
+3. **Conversion to Ready**: When work is complete, convert the draft PR to a regular PR for final review and merging.
+
 ## Development Setup
 
 ### Prerequisites
@@ -169,4 +189,3 @@ npm run audit:compatibility
 ```
 
 See the [Audit Plan](docs/AUDIT.md) for more details.
-
