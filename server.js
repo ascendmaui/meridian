@@ -55,7 +55,7 @@ function handleRequest(req, res) {
       contentType = "application/ai-catalog+json";
     }
     // Add cache header for static assets
-    res.setHeader("Cache-Control", "public, max-age=86400");
+    res.setHeader("Cache-Control", "public, max-age=31536000");
 
     fs.readFile(filePath, (err, content) => {
       if (err) {

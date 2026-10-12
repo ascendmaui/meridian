@@ -62,7 +62,7 @@ describe('Server Headers', () => {
     makeRequest('/index.html', (err, res, data) => {
       expect(err).toBeNull();
       expect(res.statusCode).toBe(200);
-      expect(res.headers['cache-control']).toBe('public, max-age=86400');
+      expect(res.headers['cache-control']).toBe('public, max-age=31536000');
       done();
     });
   });
