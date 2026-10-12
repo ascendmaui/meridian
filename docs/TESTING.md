@@ -231,3 +231,18 @@ lsof -ti:8080 | xargs kill -9 2>/dev/null || true
 - Updated audit documentation (AUDIT-RESULTS.md, AUDIT-SUMMARY.md) with latest results
 - Updated WORK_SUMMARY.md with latest audit run details
 
+
+## Continuous Integration
+
+The CI workflow runs on GitHub Actions for pushes and pull requests to the `main` and `develop` branches. The workflow executes the following steps:
+
+1. Install dependencies
+2. Run unit and integration tests (Jest)
+3. Run performance, accessibility, agentic browsing, security, content, and compatibility audits
+4. Start a server for end-to-end tests
+5. Run end-to-end tests (Cypress)
+6. Stop the server
+
+The audit scripts (`run-audit-performance.sh`, `run-audit-accessibility.sh`, `run-audit-agentic.sh`) automatically start and stop the server for their respective audits, so no manual server management is required for those steps.
+
+To view the CI workflow definition, see [.github/workflows/ci.yml](.github/workflows/ci.yml).
