@@ -29,14 +29,14 @@ function handleRequest(req, res) {
       return;
     }
     
-    let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
+    let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url.replace(/^\/+/, ''));
     const ext = path.extname(filePath);
     let contentType = 'text/html';
     switch (ext) {
       case '.js':
         contentType = 'application/javascript';
         break;
-      case '.css':
+    case '.css':
         contentType = 'text/css';
         break;
       case '.json':
