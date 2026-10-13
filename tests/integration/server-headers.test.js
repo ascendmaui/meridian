@@ -159,5 +159,32 @@ describe('Server Headers', () => {
       throw err;
     }
   });
+  test('should return AI catalog with correct content type and content for /ai-catalog.json', (done) => {
+    makeRequest('/ai-catalog.json', (err, res, data) => {
+      expect(err).toBeNull();
+      expect(res.statusCode).toBe(200);
+      expect(res.headers['content-type']).toBe('application/ai-catalog+json');
+      // Optionally, we can parse the JSON to ensure it's valid
+      const parsed = JSON.parse(data);
+      expect(parsed).toHaveProperty('specVersion', '1.0');
+      expect(parsed).toHaveProperty('entries');
+      expect(Array.isArray(parsed.entries)).toBe(true);
+      done();
+    });
+  });
+
+  test('should return AI catalog with correct content type and content for /.well-known/ai-catalog.json', (done) => {
+    makeRequest('/.well-known/ai-catalog.json', (err, res, data) => {
+      expect(err).toBeNull();
+      expect(res.statusCode).toBe(200);
+      expect(res.headers['content-type']).toBe('application/ai-catalog+json');
+      // Optionally, we can parse the JSON to ensure it's valid
+      const parsed = JSON.parse(data);
+      expect(parsed).toHaveProperty('specVersion', '1.0');
+      expect(parsed).toHaveProperty('entries');
+      expect(Array.isArray(parsed.entries)).toBe(true);
+      done();
+    });
+  });
 
 });

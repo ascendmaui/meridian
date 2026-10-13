@@ -103,6 +103,7 @@ See [docs/AUDIT.md](docs/AUDIT.md) for the audit plan and [AUDIT-RESULTS.md](AUD
 ```
 meridian/
 ├── docs/                 # Documentation files
+│   └── AI-CATALOG.md       # AI catalog format and agent discovery
 ├── src/                  # Source code (client-side)
 │   └── index.js          # Globe initialization and rendering
 ├── tests/                # Test suite
@@ -126,4 +127,4 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelin
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-*Last audit status updated: 2026-10-12T22:48:07.3NZ
+*Last audit status updated: 2026-10-12T23:08:59.3NZ
