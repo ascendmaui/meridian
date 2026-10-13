@@ -30,6 +30,27 @@ describe('Meridian Globe Experience', () => {
   it('should have a main element', () => {
     cy.get('main').should('exist');
   });
+  it('should have a canvas element for globe rendering', () => {
+    cy.get('#globe-container')
+      .find('canvas')
+      .should('exist')
+      .and('be.visible');
+  });
+
+  it('should have a canvas with reasonable dimensions', () => {
+    cy.get('#globe-container')
+      .find('canvas')
+      .then($canvas => {
+        // Check that the canvas has width and height attributes set
+        expect($canvas.attr('width')).to.be.a('string').that.is.not.empty;
+        expect($canvas.attr('height')).to.be.a('string').that.is.not.empty;
+        // Or check that the computed style has non-zero dimensions
+        const width = $canvas.width();
+        const height = $canvas.height();
+        expect(width).to.be.greaterThan(0);
+        expect(height).to.be.greaterThan(0);
+      });
+  });
 
   // Note: Additional tests for actual globe functionality would go here
   // once the globe implementation is added
