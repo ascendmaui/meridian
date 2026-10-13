@@ -113,6 +113,6 @@ This document outlines the audit areas for the Meridian interactive globe experi
 - Content audit: Passed via automated content audit script.
 - Compatibility audit: Passed via automated compatibility audit script.
 - Agentic browsing audit: Lighthouse agentic browsing score 100%.
-- All unit, integration, and end-to-end tests pass (58/58)
+- All unit, integration, and end-to-end tests pass (51/51)
 - Linting passes with no warnings (ESLint v10.x flat config).
 

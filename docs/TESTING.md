@@ -220,7 +220,7 @@ lsof -ti:8080 | xargs kill -9 2>/dev/null || true
 
 ## Recent Improvements (as of 2026-10-13)
 
-- All tests pass (unit, integration, end-to-end) - 58/58
+- All tests pass (unit, integration, end-to-end) - 51/51
 - Linting passes with no warnings (ESLint v10.x flat config)
 - Performance audit score: 100% (excellent performance)
 - Accessibility audit score: 100%
