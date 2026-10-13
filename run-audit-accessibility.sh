@@ -16,6 +16,15 @@ node server.js > server.out 2>&1 &
 SERVER_PID=$!
 echo "Server started with PID $SERVER_PID"
 
+cleanup() {
+  if [ -n "${SERVER_PID:-}" ]; then
+    kill "$SERVER_PID" 2>/dev/null || true
+    wait "$SERVER_PID" 2>/dev/null || true
+    SERVER_PID=""
+  fi
+}
+trap cleanup EXIT
+
 # Wait for server to be ready
 echo "Waiting for server to be ready on port $SERVER_PORT..."
 ATTEMPT=0
@@ -38,8 +47,6 @@ if [ "$SERVER_READY" = false ]; then
   if [ -f server.out ]; then
     tail -10 server.out
   fi
-  kill $SERVER_PID 2>/dev/null || true
-  wait $SERVER_PID 2>/dev/null || true
   exit 1
 fi
 
@@ -48,11 +55,3 @@ echo "Server is ready and responding with HTTP 200!"
 # Run accessibility audit
 echo "Running accessibility audit..."
 npm run audit:accessibility
-EXIT_CODE=$?
-
-# Kill server
-echo "Stopping server..."
-kill $SERVER_PID 2>/dev/null || true
-wait $SERVER_PID 2>/dev/null || true
-
-exit $EXIT_CODE

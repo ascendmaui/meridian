@@ -17,6 +17,15 @@ node server.js > server.out 2>&1 &
 SERVER_PID=$!
 echo "Server started with PID $SERVER_PID"
 
+cleanup() {
+  if [ -n "${SERVER_PID:-}" ]; then
+    kill "$SERVER_PID" 2>/dev/null || true
+    wait "$SERVER_PID" 2>/dev/null || true
+    SERVER_PID=""
+  fi
+}
+trap cleanup EXIT
+
 # Wait for server to be ready
 echo "Waiting for server to be ready on port $SERVER_PORT..."
 ATTEMPT=0
@@ -39,8 +48,6 @@ if [ "$SERVER_READY" = false ]; then
   if [ -f server.out ]; then
     tail -10 server.out
   fi
-  kill $SERVER_PID 2>/dev/null || true
-  wait $SERVER_PID 2>/dev/null || true
   exit 1
 fi
 
@@ -51,8 +58,12 @@ echo "Running performance audit..."
 RETRY_COUNT=0
 while [ $RETRY_COUNT -lt $MAX_AUDIT_RETRIES ]; do
   echo "Running performance audit (attempt $((RETRY_COUNT+1))/$MAX_AUDIT_RETRIES)..."
+  # Command substitutions fail the script immediately under `set -e`, which
+  # drops Lighthouse's stderr before it can be printed or retried.
+  set +e
   OUTPUT=$(npm run audit:performance 2>&1)
   EXIT_CODE=$?
+  set -e
   echo "$OUTPUT"
   if [ $EXIT_CODE -eq 0 ]; then
     echo "Performance audit passed."
@@ -73,15 +84,9 @@ while [ $RETRY_COUNT -lt $MAX_AUDIT_RETRIES ]; do
   fi
 done
 
-if [ $EXIT_CODE -ne 0 ]; then
-  echo "Performance audit failed after $MAX_AUDIT_RETRIES attempts."
-  # Exit with the exit code of the last run
-  exit $EXIT_CODE
+if [ "$EXIT_CODE" -ne 0 ]; then
+  echo "Performance audit failed."
+  exit "$EXIT_CODE"
 fi
 
-# Kill server
-echo "Stopping server..."
-kill $SERVER_PID 2>/dev/null || true
-wait $SERVER_PID 2>/dev/null || true
-
-exit $EXIT_CODE
+exit "$EXIT_CODE"
