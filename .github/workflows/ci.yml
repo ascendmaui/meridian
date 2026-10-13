@@ -20,29 +20,12 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: ${{ node-version }}
 
     - name: Install dependencies
       run: npm ci
 
-    - name: Start server
-      run: |
-        nohup node server.js > server.log 2>&1 &
-        echo $! > server.pid
-        sleep 10
-
-    - name: Wait for server
-      run: |
-        for i in {1..30}; do
-          if curl -s http://localhost:8080 > /dev/null; then
-            echo "Server is ready"
-            break
-          fi
-          echo "Waiting for server..."
-          sleep 2
-        done
-
-    - name: Run tests
+    - name: Run unit and integration tests
       run: npm test
 
     - name: Run performance audit
@@ -57,11 +40,31 @@ jobs:
     - name: Run security audit
       run: npm audit
 
-    - name: Content audit (manual)
-      run: echo "Content audit manual step - please review content for accuracy and tone"
+    - name: Content audit
+      run: npm run audit:content
 
-    - name: Compatibility audit (manual)
-      run: echo "Compatibility audit manual step - please test on target browsers and devices"
+    - name: Run compatibility audit
+      run: npm run audit:compatibility
+
+    - name: Start server for E2E tests
+      run: |
+        nohup node server.js > server.log 2>&1 &
+        echo $! > server.pid
+        sleep 10
+
+    - name: Wait for server for E2E
+      run: |
+        for i in {1..30}; do
+          if curl -s http://localhost:8080 > /dev/null; then
+            echo "Server is ready"
+            break
+          fi
+          echo "Waiting for server..."
+          sleep 2
+        done
+
+    - name: Run end-to-end tests
+      run: npm run test:e2e
 
     - name: Stop server
       if: always()
