@@ -1,26 +1,20 @@
 {
   "lighthouseVersion": "13.5.0",
   "requestedUrl": "http://localhost:8080/",
-  "mainDocumentUrl": "chrome-error://chromewebdata/",
-  "finalDisplayedUrl": "chrome-error://chromewebdata/",
-  "finalUrl": "chrome-error://chromewebdata/",
-  "fetchTime": "2026-10-13T02:59:19.889Z",
+  "mainDocumentUrl": "http://localhost:8080/",
+  "finalDisplayedUrl": "http://localhost:8080/",
+  "finalUrl": "http://localhost:8080/",
+  "fetchTime": "2026-10-13T03:05:05.644Z",
   "gatherMode": "navigation",
-  "runtimeError": {
-    "code": "CHROME_INTERSTITIAL_ERROR",
-    "message": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-    "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1",
-    "artifactKey": "PageLoadError"
-  },
-  "runWarnings": [
-    "The page may not be loading as expected because your test URL (http://localhost:8080/) was redirected to chrome-error://chromewebdata/. Try testing the second URL directly.",
-    "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests."
-  ],
+  "runWarnings": [],
   "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
   "environment": {
+    "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
     "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
-    "benchmarkIndex": 2210.5,
-    "credits": {}
+    "benchmarkIndex": 2096.5,
+    "credits": {
+      "axe-core": "4.14.0"
+    }
   },
   "audits": {
     "accesskeys": {
@@ -28,684 +22,802 @@
       "title": "`[accesskey]` values are unique",
       "description": "Access keys let users quickly focus a part of the page. For proper navigation, each access key must be unique. [Learn more about access keys](https://dequeuniversity.com/rules/axe/4.13/accesskeys).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-allowed-attr": {
       "id": "aria-allowed-attr",
       "title": "`[aria-*]` attributes match their roles",
       "description": "Each ARIA `role` supports a specific subset of `aria-*` attributes. Mismatching these invalidates the `aria-*` attributes. [Learn how to match ARIA attributes to their roles](https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "aria-allowed-role": {
       "id": "aria-allowed-role",
       "title": "Uses ARIA roles only on compatible elements",
       "description": "Many HTML elements can only be assigned certain ARIA roles. Using ARIA roles where they are not allowed can interfere with the accessibility of the web page. [Learn more about ARIA roles](https://dequeuniversity.com/rules/axe/4.13/aria-allowed-role).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-command-name": {
       "id": "aria-command-name",
       "title": "`button`, `link`, and `menuitem` elements have accessible names",
       "description": "When an element doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn how to make command elements more accessible](https://dequeuniversity.com/rules/axe/4.13/aria-command-name).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-conditional-attr": {
       "id": "aria-conditional-attr",
       "title": "ARIA attributes are used as specified for the element's role",
       "description": "Some ARIA attributes are only allowed on an element under certain conditions. [Learn more about conditional ARIA attributes](https://dequeuniversity.com/rules/axe/4.13/aria-conditional-attr).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "aria-deprecated-role": {
       "id": "aria-deprecated-role",
       "title": "Deprecated ARIA roles were not used",
       "description": "Deprecated ARIA roles may not be processed correctly by assistive technology. [Learn more about deprecated ARIA roles](https://dequeuniversity.com/rules/axe/4.13/aria-deprecated-role).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "aria-dialog-name": {
       "id": "aria-dialog-name",
       "title": "Elements with `role=\"dialog\"` or `role=\"alertdialog\"` have accessible names.",
       "description": "ARIA dialog elements without accessible names may prevent screen readers users from discerning the purpose of these elements. [Learn how to make ARIA dialog elements more accessible](https://dequeuniversity.com/rules/axe/4.13/aria-dialog-name).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-hidden-body": {
       "id": "aria-hidden-body",
       "title": "`[aria-hidden=\"true\"]` is not present on the document `<body>`",
       "description": "Assistive technologies, like screen readers, work inconsistently when `aria-hidden=\"true\"` is set on the document `<body>`. [Learn how `aria-hidden` affects the document body](https://dequeuniversity.com/rules/axe/4.13/aria-hidden-body).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "aria-hidden-focus": {
       "id": "aria-hidden-focus",
       "title": "`[aria-hidden=\"true\"]` elements do not contain focusable descendents",
       "description": "Focusable descendents within an `[aria-hidden=\"true\"]` element prevent those interactive elements from being available to users of assistive technologies like screen readers. [Learn how `aria-hidden` affects focusable elements](https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-input-field-name": {
       "id": "aria-input-field-name",
       "title": "ARIA input fields have accessible names",
       "description": "When an input field doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more about input field labels](https://dequeuniversity.com/rules/axe/4.13/aria-input-field-name).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-meter-name": {
       "id": "aria-meter-name",
       "title": "ARIA `meter` elements have accessible names",
       "description": "When a meter element doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn how to name `meter` elements](https://dequeuniversity.com/rules/axe/4.13/aria-meter-name).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-progressbar-name": {
       "id": "aria-progressbar-name",
       "title": "ARIA `progressbar` elements have accessible names",
       "description": "When a `progressbar` element doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn how to label `progressbar` elements](https://dequeuniversity.com/rules/axe/4.13/aria-progressbar-name).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-prohibited-attr": {
       "id": "aria-prohibited-attr",
       "title": "Elements use only permitted ARIA attributes",
       "description": "Using ARIA attributes in roles where they are prohibited can mean that important information is not communicated to users of assistive technologies. [Learn more about prohibited ARIA roles](https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "aria-required-attr": {
       "id": "aria-required-attr",
       "title": "`[role]`s have all required `[aria-*]` attributes",
       "description": "Some ARIA roles have required attributes that describe the state of the element to screen readers. [Learn more about roles and required attributes](https://dequeuniversity.com/rules/axe/4.13/aria-required-attr).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "aria-required-children": {
       "id": "aria-required-children",
       "title": "Elements with an ARIA `[role]` that require children to contain a specific `[role]` have all required children.",
       "description": "Some ARIA parent roles must contain specific child roles to perform their intended accessibility functions. [Learn more about roles and required children elements](https://dequeuniversity.com/rules/axe/4.13/aria-required-children).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-required-parent": {
       "id": "aria-required-parent",
       "title": "`[role]`s are contained by their required parent element",
       "description": "Some ARIA child roles must be contained by specific parent roles to properly perform their intended accessibility functions. [Learn more about ARIA roles and required parent element](https://dequeuniversity.com/rules/axe/4.13/aria-required-parent).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-roles": {
       "id": "aria-roles",
       "title": "`[role]` values are valid",
       "description": "ARIA roles must have valid values in order to perform their intended accessibility functions. [Learn more about valid ARIA roles](https://dequeuniversity.com/rules/axe/4.13/aria-roles).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "aria-text": {
       "id": "aria-text",
       "title": "Elements with the `role=text` attribute do not have focusable descendents.",
       "description": "Adding `role=text` around a text node split by markup enables VoiceOver to treat it as one phrase, but the element's focusable descendents will not be announced. [Learn more about the `role=text` attribute](https://dequeuniversity.com/rules/axe/4.13/aria-text).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-toggle-field-name": {
       "id": "aria-toggle-field-name",
       "title": "ARIA toggle fields have accessible names",
       "description": "When a toggle field doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more about toggle fields](https://dequeuniversity.com/rules/axe/4.13/aria-toggle-field-name).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-tooltip-name": {
       "id": "aria-tooltip-name",
       "title": "ARIA `tooltip` elements have accessible names",
       "description": "When a tooltip element doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn how to name `tooltip` elements](https://dequeuniversity.com/rules/axe/4.13/aria-tooltip-name).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-treeitem-name": {
       "id": "aria-treeitem-name",
       "title": "ARIA `treeitem` elements have accessible names",
       "description": "When a `treeitem` element doesn't have an accessible name, screen readers announce it with a generic name, making it unusable for users who rely on screen readers. [Learn more about labeling `treeitem` elements](https://dequeuniversity.com/rules/axe/4.13/aria-treeitem-name).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "aria-valid-attr-value": {
       "id": "aria-valid-attr-value",
       "title": "`[aria-*]` attributes have valid values",
       "description": "Assistive technologies, like screen readers, can't interpret ARIA attributes with invalid values. [Learn more about valid values for ARIA attributes](https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "aria-valid-attr": {
       "id": "aria-valid-attr",
       "title": "`[aria-*]` attributes are valid and not misspelled",
       "description": "Assistive technologies, like screen readers, can't interpret ARIA attributes with invalid names. [Learn more about valid ARIA attributes](https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "button-name": {
       "id": "button-name",
       "title": "Buttons have an accessible name",
       "description": "When a button doesn't have an accessible name, screen readers announce it as \"button\", making it unusable for users who rely on screen readers. [Learn how to make buttons more accessible](https://dequeuniversity.com/rules/axe/4.13/button-name).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "bypass": {
       "id": "bypass",
       "title": "The page contains a heading, skip link, or landmark region",
       "description": "Adding ways to bypass repetitive content lets keyboard users navigate the page more efficiently. [Learn more about bypass blocks](https://dequeuniversity.com/rules/axe/4.13/bypass).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "color-contrast": {
       "id": "color-contrast",
       "title": "Background and foreground colors have a sufficient contrast ratio",
       "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.13/color-contrast).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "definition-list": {
       "id": "definition-list",
       "title": "`<dl>`'s contain only properly-ordered `<dt>` and `<dd>` groups, `<script>`, `<template>` or `<div>` elements.",
       "description": "When definition lists are not properly marked up, screen readers may produce confusing or inaccurate output. [Learn how to structure definition lists correctly](https://dequeuniversity.com/rules/axe/4.13/definition-list).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "dlitem": {
       "id": "dlitem",
       "title": "Definition list items are wrapped in `<dl>` elements",
       "description": "Definition list items (`<dt>` and `<dd>`) must be wrapped in a parent `<dl>` element to ensure that screen readers can properly announce them. [Learn how to structure definition lists correctly](https://dequeuniversity.com/rules/axe/4.13/dlitem).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "document-title": {
       "id": "document-title",
       "title": "Document has a `<title>` element",
       "description": "The title gives screen reader users an overview of the page, and search engine users rely on it heavily to determine if a page is relevant to their search. [Learn more about document titles](https://dequeuniversity.com/rules/axe/4.13/document-title).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "duplicate-id-aria": {
       "id": "duplicate-id-aria",
       "title": "ARIA IDs are unique",
       "description": "The value of an ARIA ID must be unique to prevent other instances from being overlooked by assistive technologies. [Learn how to fix duplicate ARIA IDs](https://dequeuniversity.com/rules/axe/4.13/duplicate-id-aria).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "empty-heading": {
       "id": "empty-heading",
       "title": "All heading elements contain content.",
       "description": "A heading with no content or inaccessible text prevent screen reader users from accessing information on the page's structure. [Learn more about headings](https://dequeuniversity.com/rules/axe/4.13/empty-heading).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "form-field-multiple-labels": {
       "id": "form-field-multiple-labels",
       "title": "No form fields have multiple labels",
       "description": "Form fields with multiple labels can be confusingly announced by assistive technologies like screen readers which use either the first, the last, or all of the labels. [Learn how to use form labels](https://dequeuniversity.com/rules/axe/4.13/form-field-multiple-labels).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "frame-title": {
       "id": "frame-title",
       "title": "`<frame>` or `<iframe>` elements have a title",
       "description": "Screen reader users rely on frame titles to describe the contents of frames. [Learn more about frame titles](https://dequeuniversity.com/rules/axe/4.13/frame-title).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "heading-order": {
       "id": "heading-order",
       "title": "Heading elements appear in a sequentially-descending order",
       "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more about heading order](https://dequeuniversity.com/rules/axe/4.13/heading-order).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "html-has-lang": {
       "id": "html-has-lang",
       "title": "`<html>` element has a `[lang]` attribute",
       "description": "If a page doesn't specify a `lang` attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader. If the page isn't actually in the default language, then the screen reader might not announce the page's text correctly. [Learn more about the `lang` attribute](https://dequeuniversity.com/rules/axe/4.13/html-has-lang).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "html-lang-valid": {
       "id": "html-lang-valid",
       "title": "`<html>` element has a valid value for its `[lang]` attribute",
       "description": "Specifying a valid [BCP 47 language](https://www.w3.org/International/questions/qa-choosing-language-tags#question) helps screen readers announce text properly. [Learn how to use the `lang` attribute](https://dequeuniversity.com/rules/axe/4.13/html-lang-valid).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "html-xml-lang-mismatch": {
       "id": "html-xml-lang-mismatch",
       "title": "`<html>` element has an `[xml:lang]` attribute with the same base language as the `[lang]` attribute.",
       "description": "If the webpage does not specify a consistent language, then the screen reader might not announce the page's text correctly. [Learn more about the `lang` attribute](https://dequeuniversity.com/rules/axe/4.13/html-xml-lang-mismatch).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "identical-links-same-purpose": {
       "id": "identical-links-same-purpose",
       "title": "Identical links have the same purpose.",
       "description": "Links with the same destination should have the same description, to help users understand the link's purpose and decide whether to follow it. [Learn more about identical links](https://dequeuniversity.com/rules/axe/4.13/identical-links-same-purpose).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "image-alt": {
       "id": "image-alt",
       "title": "Image elements have `[alt]` attributes",
       "description": "Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more about the `alt` attribute](https://dequeuniversity.com/rules/axe/4.13/image-alt).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "image-redundant-alt": {
       "id": "image-redundant-alt",
       "title": "Image elements do not have `[alt]` attributes that are redundant text.",
       "description": "Informative elements should aim for short, descriptive alternative text. Alternative text that is exactly the same as the text adjacent to the link or image is potentially confusing for screen reader users, because the text will be read twice. [Learn more about the `alt` attribute](https://dequeuniversity.com/rules/axe/4.13/image-redundant-alt).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "input-button-name": {
       "id": "input-button-name",
       "title": "Input buttons have discernible text.",
       "description": "Adding discernable and accessible text to input buttons may help screen reader users understand the purpose of the input button. [Learn more about input buttons](https://dequeuniversity.com/rules/axe/4.13/input-button-name).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "input-image-alt": {
       "id": "input-image-alt",
       "title": "`<input type=\"image\">` elements have `[alt]` text",
       "description": "When an image is being used as an `<input>` button, providing alternative text can help screen reader users understand the purpose of the button. [Learn about input image alt text](https://dequeuniversity.com/rules/axe/4.13/input-image-alt).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "label-content-name-mismatch": {
       "id": "label-content-name-mismatch",
       "title": "Elements with visible text labels have matching accessible names.",
       "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.13/label-content-name-mismatch).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "label": {
       "id": "label",
       "title": "Form elements have associated labels",
       "description": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more about form element labels](https://dequeuniversity.com/rules/axe/4.13/label).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "landmark-one-main": {
       "id": "landmark-one-main",
       "title": "Document has a main landmark.",
       "description": "One main landmark helps screen reader users navigate a web page. [Learn more about landmarks](https://dequeuniversity.com/rules/axe/4.13/landmark-one-main).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "link-name": {
       "id": "link-name",
       "title": "Links have a discernible name",
       "description": "Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. [Learn how to make links accessible](https://dequeuniversity.com/rules/axe/4.13/link-name).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "link-in-text-block": {
       "id": "link-in-text-block",
       "title": "Links are distinguishable without relying on color.",
       "description": "Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. [Learn how to make links distinguishable](https://dequeuniversity.com/rules/axe/4.13/link-in-text-block).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "list": {
       "id": "list",
       "title": "Lists contain only `<li>` elements and script supporting elements (`<script>` and `<template>`).",
       "description": "Screen readers have a specific way of announcing lists. Ensuring proper list structure aids screen reader output. [Learn more about proper list structure](https://dequeuniversity.com/rules/axe/4.13/list).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "listitem": {
       "id": "listitem",
       "title": "List items (`<li>`) are contained within `<ul>`, `<ol>` or `<menu>` parent elements",
       "description": "Screen readers require list items (`<li>`) to be contained within a parent `<ul>`, `<ol>` or `<menu>` to be announced properly. [Learn more about proper list structure](https://dequeuniversity.com/rules/axe/4.13/listitem).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "meta-refresh": {
       "id": "meta-refresh",
       "title": "The document does not use `<meta http-equiv=\"refresh\">`",
       "description": "Users do not expect a page to refresh automatically, and doing so will move focus back to the top of the page. This may create a frustrating or confusing experience. [Learn more about the refresh meta tag](https://dequeuniversity.com/rules/axe/4.13/meta-refresh).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "meta-viewport": {
       "id": "meta-viewport",
       "title": "`[user-scalable=\"no\"]` is not used in the `<meta name=\"viewport\">` element and the `[maximum-scale]` attribute is not less than 5.",
       "description": "Disabling zooming is problematic for users with low vision who rely on screen magnification to properly see the contents of a web page. [Learn more about the viewport meta tag](https://dequeuniversity.com/rules/axe/4.13/meta-viewport).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "object-alt": {
       "id": "object-alt",
       "title": "`<object>` elements have alternate text",
       "description": "Screen readers cannot translate non-text content. Adding alternate text to `<object>` elements helps screen readers convey meaning to users. [Learn more about alt text for `object` elements](https://dequeuniversity.com/rules/axe/4.13/object-alt).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "select-name": {
       "id": "select-name",
       "title": "Select elements have associated label elements.",
       "description": "Form elements without effective labels can create frustrating experiences for screen reader users. [Learn more about the `select` element](https://dequeuniversity.com/rules/axe/4.13/select-name).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "skip-link": {
       "id": "skip-link",
       "title": "Skip links are focusable.",
       "description": "Including a skip link can help users skip to the main content to save time. [Learn more about skip links](https://dequeuniversity.com/rules/axe/4.13/skip-link).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "tabindex": {
       "id": "tabindex",
       "title": "No element has a `[tabindex]` value greater than 0",
       "description": "A value greater than 0 implies an explicit navigation ordering. Although technically valid, this often creates frustrating experiences for users who rely on assistive technologies. [Learn more about the `tabindex` attribute](https://dequeuniversity.com/rules/axe/4.13/tabindex).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "table-duplicate-name": {
       "id": "table-duplicate-name",
       "title": "Tables have different content in the summary attribute and `<caption>`.",
       "description": "The summary attribute should describe the table structure, while `<caption>` should have the onscreen title. Accurate table mark-up helps users of screen readers. [Learn more about summary and caption](https://dequeuniversity.com/rules/axe/4.13/table-duplicate-name).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "table-fake-caption": {
       "id": "table-fake-caption",
       "title": "Tables use `<caption>` instead of cells with the `[colspan]` attribute to indicate a caption.",
       "description": "Screen readers have features to make navigating tables easier. Ensuring that tables use the actual caption element instead of cells with the `[colspan]` attribute may improve the experience for screen reader users. [Learn more about captions](https://dequeuniversity.com/rules/axe/4.13/table-fake-caption).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "target-size": {
       "id": "target-size",
       "title": "Touch targets have sufficient size and spacing.",
       "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.13/target-size).",
-      "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "score": 1,
+      "scoreDisplayMode": "binary",
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "relatedNode",
+              "valueType": "node"
+            },
+            "label": "Failing Elements"
+          }
+        ],
+        "items": []
+      }
     },
     "td-has-header": {
       "id": "td-has-header",
       "title": "`<td>` elements in a large `<table>` have one or more table headers.",
       "description": "Screen readers have features to make navigating tables easier. Ensuring that `<td>` elements in a large table (3 or more cells in width and height) have an associated table header may improve the experience for screen reader users. [Learn more about table headers](https://dequeuniversity.com/rules/axe/4.13/td-has-header).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "td-headers-attr": {
       "id": "td-headers-attr",
       "title": "Cells in a `<table>` element that use the `[headers]` attribute refer to table cells within the same table.",
       "description": "Screen readers have features to make navigating tables easier. Ensuring `<td>` cells using the `[headers]` attribute only refer to other cells in the same table may improve the experience for screen reader users. [Learn more about the `headers` attribute](https://dequeuniversity.com/rules/axe/4.13/td-headers-attr).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "th-has-data-cells": {
       "id": "th-has-data-cells",
       "title": "`<th>` elements and elements with `[role=\"columnheader\"/\"rowheader\"]` have data cells they describe.",
       "description": "Screen readers have features to make navigating tables easier. Ensuring table headers always refer to some set of cells may improve the experience for screen reader users. [Learn more about table headers](https://dequeuniversity.com/rules/axe/4.13/th-has-data-cells).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "valid-lang": {
       "id": "valid-lang",
       "title": "`[lang]` attributes have a valid value",
       "description": "Specifying a valid [BCP 47 language](https://www.w3.org/International/questions/qa-choosing-language-tags#question) on elements helps ensure that text is pronounced correctly by a screen reader. [Learn how to use the `lang` attribute](https://dequeuniversity.com/rules/axe/4.13/valid-lang).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "video-caption": {
       "id": "video-caption",
       "title": "`<video>` elements contain a `<track>` element with `[kind=\"captions\"]`",
       "description": "When a video provides a caption it is easier for deaf and hearing impaired users to access its information. [Learn more about video captions](https://dequeuniversity.com/rules/axe/4.13/video-caption).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "custom-controls-labels": {
       "id": "custom-controls-labels",
       "title": "Custom controls have associated labels",
       "description": "Custom interactive controls have associated labels, provided by aria-label or aria-labelledby. [Learn more about custom controls and labels](https://developer.chrome.com/docs/lighthouse/accessibility/custom-controls-labels/).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "manual"
     },
     "custom-controls-roles": {
       "id": "custom-controls-roles",
       "title": "Custom controls have ARIA roles",
       "description": "Custom interactive controls have appropriate ARIA roles. [Learn how to add roles to custom controls](https://developer.chrome.com/docs/lighthouse/accessibility/custom-control-roles/).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "manual"
     },
     "focus-traps": {
       "id": "focus-traps",
       "title": "User focus is not accidentally trapped in a region",
       "description": "A user can tab into and out of any control or region without accidentally trapping their focus. [Learn how to avoid focus traps](https://developer.chrome.com/docs/lighthouse/accessibility/focus-traps/).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "manual"
     },
     "focusable-controls": {
       "id": "focusable-controls",
       "title": "Interactive controls are keyboard focusable",
       "description": "Custom interactive controls are keyboard focusable and display a focus indicator. [Learn how to make custom controls focusable](https://developer.chrome.com/docs/lighthouse/accessibility/focusable-controls/).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "manual"
     },
     "interactive-element-affordance": {
       "id": "interactive-element-affordance",
       "title": "Interactive elements indicate their purpose and state",
       "description": "Interactive elements, such as links and buttons, should indicate their state and be distinguishable from non-interactive elements. [Learn how to decorate interactive elements with affordance hints](https://developer.chrome.com/docs/lighthouse/accessibility/interactive-element-affordance/).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "manual"
     },
     "logical-tab-order": {
       "id": "logical-tab-order",
       "title": "The page has a logical tab order",
       "description": "Tabbing through the page follows the visual layout. Users cannot focus elements that are offscreen. [Learn more about logical tab ordering](https://developer.chrome.com/docs/lighthouse/accessibility/logical-tab-order/).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "manual"
     },
     "managed-focus": {
       "id": "managed-focus",
       "title": "The user's focus is directed to new content added to the page",
       "description": "If new content, such as a dialog, is added to the page, the user's focus is directed to it. [Learn how to direct focus to new content](https://developer.chrome.com/docs/lighthouse/accessibility/managed-focus/).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "manual"
     },
     "offscreen-content-hidden": {
       "id": "offscreen-content-hidden",
       "title": "Offscreen content is hidden from assistive technology",
       "description": "Offscreen content is hidden with display: none or aria-hidden=true. [Learn how to properly hide offscreen content](https://developer.chrome.com/docs/lighthouse/accessibility/offscreen-content-hidden/).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "manual"
     },
     "use-landmarks": {
       "id": "use-landmarks",
       "title": "HTML5 landmark elements are used to improve navigation",
       "description": "Landmark elements (`<main>`, `<nav>`, etc.) are used to improve the keyboard navigation of the page for assistive technology. [Learn more about landmark elements](https://developer.chrome.com/docs/lighthouse/accessibility/use-landmarks/).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "manual"
     },
     "visual-order-follows-dom": {
       "id": "visual-order-follows-dom",
       "title": "Visual order on the page follows DOM order",
       "description": "DOM order matches the visual order, improving navigation for assistive technology. [Learn more about DOM and visual ordering](https://developer.chrome.com/docs/lighthouse/accessibility/visual-order-follows-dom/).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "manual"
     },
     "autocomplete-valid": {
       "id": "autocomplete-valid",
       "title": "`autocomplete` attributes are used correctly",
       "description": "The `autocomplete` attribute values must be valid and correctly applied for screen readers to function correctly. [Learn more about valid autocomplete values](https://dequeuniversity.com/rules/axe/4.13/autocomplete-valid).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "presentation-role-conflict": {
       "id": "presentation-role-conflict",
       "title": "Elements with `role=\"none\"` or `role=\"presentation\"` do not have conflicts",
       "description": "There are certain cases where the semantic role of an element with `role=\"none\"` or `role=\"presentation\"` does not resolve to none or presentation. To ensure the element remains removed from the accessibility tree, you should not add any global ARIA attributes to the element or make it focusable. [Learn more about presentation role conflict](https://dequeuniversity.com/rules/axe/4.13/presentation-role-conflict).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     },
     "svg-img-alt": {
       "id": "svg-img-alt",
       "title": "SVG elements with an `img` role have an accessible text alternative",
       "description": "Ensures SVG elements with an `img`, `graphics-document` or `graphics-symbol` role have an accessible text alternative. [Learn more about SVG alt text](https://dequeuniversity.com/rules/axe/4.13/svg-img-alt).",
       "score": null,
-      "scoreDisplayMode": "error",
-      "errorMessage": "Chrome prevented page load with an interstitial. Make sure you are testing the correct URL and that the server is properly responding to all requests.",
-      "errorStack": "LighthouseError: CHROME_INTERSTITIAL_ERROR\n    at getInterstitialError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:97:10)\n    at getPageLoadError (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/lib/navigation-error.js:166:29)\n    at _computeNavigationResult (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:148:7)\n    at async gatherFn (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:300:23)\n    at async Runner.gather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/runner.js:232:25)\n    at async navigationGather (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/gather/navigation-runner.js:306:21)\n    at async navigation (file:///Users/j/Projects/meridian/node_modules/lighthouse/core/index.js:58:24)\n    at async runLighthouse (file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/run.js:210:26)\n    at async file:///Users/j/Projects/meridian/node_modules/lighthouse/cli/index.js:10:1"
+      "scoreDisplayMode": "notApplicable"
     }
   },
   "configSettings": {
@@ -775,7 +887,7 @@
       "auditRefs": [
         {
           "id": "accesskeys",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-navigation"
         },
         {
@@ -785,7 +897,7 @@
         },
         {
           "id": "aria-command-name",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-aria"
         },
         {
@@ -800,7 +912,7 @@
         },
         {
           "id": "aria-dialog-name",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-aria"
         },
         {
@@ -810,22 +922,22 @@
         },
         {
           "id": "aria-hidden-focus",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-aria"
         },
         {
           "id": "aria-input-field-name",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-aria"
         },
         {
           "id": "aria-meter-name",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-aria"
         },
         {
           "id": "aria-progressbar-name",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-aria"
         },
         {
@@ -840,12 +952,12 @@
         },
         {
           "id": "aria-required-children",
-          "weight": 10,
+          "weight": 0,
           "group": "a11y-aria"
         },
         {
           "id": "aria-required-parent",
-          "weight": 10,
+          "weight": 0,
           "group": "a11y-aria"
         },
         {
@@ -855,22 +967,22 @@
         },
         {
           "id": "aria-text",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-aria"
         },
         {
           "id": "aria-toggle-field-name",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-aria"
         },
         {
           "id": "aria-tooltip-name",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-aria"
         },
         {
           "id": "aria-treeitem-name",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-aria"
         },
         {
@@ -885,12 +997,12 @@
         },
         {
           "id": "button-name",
-          "weight": 10,
+          "weight": 0,
           "group": "a11y-names-labels"
         },
         {
           "id": "bypass",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-navigation"
         },
         {
@@ -900,12 +1012,12 @@
         },
         {
           "id": "definition-list",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-tables-lists"
         },
         {
           "id": "dlitem",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-tables-lists"
         },
         {
@@ -915,22 +1027,22 @@
         },
         {
           "id": "duplicate-id-aria",
-          "weight": 10,
+          "weight": 0,
           "group": "a11y-aria"
         },
         {
           "id": "form-field-multiple-labels",
-          "weight": 3,
+          "weight": 0,
           "group": "a11y-names-labels"
         },
         {
           "id": "frame-title",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-names-labels"
         },
         {
           "id": "heading-order",
-          "weight": 3,
+          "weight": 0,
           "group": "a11y-navigation"
         },
         {
@@ -945,32 +1057,32 @@
         },
         {
           "id": "html-xml-lang-mismatch",
-          "weight": 3,
+          "weight": 0,
           "group": "a11y-language"
         },
         {
           "id": "image-alt",
-          "weight": 10,
+          "weight": 0,
           "group": "a11y-names-labels"
         },
         {
           "id": "input-button-name",
-          "weight": 10,
+          "weight": 0,
           "group": "a11y-names-labels"
         },
         {
           "id": "input-image-alt",
-          "weight": 10,
+          "weight": 0,
           "group": "a11y-names-labels"
         },
         {
           "id": "label",
-          "weight": 10,
+          "weight": 0,
           "group": "a11y-names-labels"
         },
         {
           "id": "link-in-text-block",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-color-contrast"
         },
         {
@@ -980,17 +1092,17 @@
         },
         {
           "id": "list",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-tables-lists"
         },
         {
           "id": "listitem",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-tables-lists"
         },
         {
           "id": "meta-refresh",
-          "weight": 10,
+          "weight": 0,
           "group": "a11y-best-practices"
         },
         {
@@ -1000,12 +1112,12 @@
         },
         {
           "id": "object-alt",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-names-labels"
         },
         {
           "id": "select-name",
-          "weight": 10,
+          "weight": 0,
           "group": "a11y-names-labels"
         },
         {
@@ -1015,7 +1127,7 @@
         },
         {
           "id": "tabindex",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-navigation"
         },
         {
@@ -1025,22 +1137,22 @@
         },
         {
           "id": "td-headers-attr",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-tables-lists"
         },
         {
           "id": "th-has-data-cells",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-tables-lists"
         },
         {
           "id": "valid-lang",
-          "weight": 7,
+          "weight": 0,
           "group": "a11y-language"
         },
         {
           "id": "video-caption",
-          "weight": 10,
+          "weight": 0,
           "group": "a11y-audio-video"
         },
         {
@@ -1050,17 +1162,17 @@
         },
         {
           "id": "autocomplete-valid",
-          "weight": 1,
+          "weight": 0,
           "group": "a11y-best-practices"
         },
         {
           "id": "presentation-role-conflict",
-          "weight": 1,
+          "weight": 0,
           "group": "a11y-best-practices"
         },
         {
           "id": "svg-img-alt",
-          "weight": 1,
+          "weight": 0,
           "group": "a11y-best-practices"
         },
         {
@@ -1145,7 +1257,7 @@
         }
       ],
       "id": "accessibility",
-      "score": null
+      "score": 1
     }
   },
   "categoryGroups": {
@@ -1233,574 +1345,648 @@
     }
   },
   "stackPacks": [],
+  "entities": [
+    {
+      "name": "localhost",
+      "origins": [
+        "http://localhost:8080"
+      ],
+      "isFirstParty": true,
+      "isUnrecognized": true
+    },
+    {
+      "name": "JSDelivr CDN",
+      "homepage": "https://www.jsdelivr.com/",
+      "origins": [
+        "https://cdn.jsdelivr.net"
+      ],
+      "category": "cdn"
+    }
+  ],
+  "fullPageScreenshot": {
+    "screenshot": {
+      "data": "data:image/webp;base64,UklGRqoIAABXRUJQVlA4IJ4IAAAwfQCdASqcATcDPxGIv1msKKc1ILFY4qAiCWlu/Gf5jufvYtpP0faBx2pucvPTTtTBJ5/ibmQwis/rV3x6iWO949RLHe8eoljvePUSx3vldXR4e4UQALiQexaDhIPYtCb8RM20PSRjxGkjHiONRNPJWM8rzdJGPEaSREuHC/BtJGPEaSMeI06c+GlabXUrfHlebpIzXowzijuLUKJpIx4jSYrJFr5ifSt8eV5ukjIBQchCUiIeomkjHiNJIiXDhfg2kjHiNJGPEadOfDStNrqVvjyvN0kZr0YZxR3FqFE0kY8RpMVki18xPpW+PK83SRkAoOQhKREPUTSRjxGkkRLhwvwbSRjxGkjHiNOnPhpWm11K3x5Xm6SM16MM4o7i1CiaSMeI0mKyRa+Yn0rfHlebpIyAUHIQlIiHqJpIx4jSSIlw4X4NpIxSA1Q6PrKd+NCmHWM/9BZ9PkNvj3bSnC/BtI6YDV7oKmX01W/S/7DBphXBMhEMfys4o7ipYE+cgWrOaYHHY8vFNl1KPV0Idc0rTa5RP7lx/K2LQAtTyfWUKcjNLQSCXy6nWh9YQhCji9aVKGnm724kYvobRAuz5zCPDj3PloBARImRE40JfjJrJrfGQWnHvbm1KmguYyxjGaqPHfQiQ54t5GBSld/XQQYIo7acNi0+6fb/jZO9fsQ/GBXuzDwGYA3JZWThCUiFvjP2USvjMst8pbzWH8Q++Rh4htYB5hE20oMbFwnlM9ZzDrd5Mp4Cw0qCZiMMd/B7RIcc/BcRg31YsBEJNmWo2aO4KVLr5gySTJ58IOEDjDNkeSdPJ7tMq9f1BN4tUD8RFIX+jfbJPRkxR0jHgrl+pIQlIiLlACpmQT3R/1Eq6eiri+sJ4z91tpwAU5uXU60PxDxozaSdNZeEKy9vc4VeenKK1n+PQE3z2zu/ktp4UtfMT6VkGJelmjXLnh6QJFMxnA6FKA3swVE5//hnODqzg4QlIiHqJ0xK4YQiA7u4UUp9UV0sSan6ZETjy1jxPpi9+bHZLP0yInHlrGPEaSMeJmp+mRE48tYx4jSRjxM1P0yInHlrGPEaYZUTijwdplXukjHiNJGPEcUeDtMq90kY8RpIx4jijwdplXukjHiNJGPEcUeDtMq90kY8RpIx4jijwdplXukjHiNJGPEcUeDtMq90kY8RpIx4jijwdplXukjHiNJGPEcUeDtMq90kY8RpIx4jijwdplXukjHiNJGPEcUeDtMq90kY8RpIx4jijwdplXukjHiNJGPEcUeDtMq90kY8RpIx4jijwdplXukjHiNJGPEarB0HmEm1l1Esd7x6iWO949RLHe8eoljvePUSx3vCAAD+/tzPjHqNDtdvoP/x9Gx2tGgdJA84TUlCgD2DHAYCwCBmXuVIGFe5UgYV7lSBhXuVIGFe5UgYV7lSBhXuVIGFe5UgYV7lSBhXuVIGFe5UgYV7lSBhXuVIGFe5UgYV7lSBhXuVOJQ8P3eAope8s/jBP07KNEu0ap5gtMEs5kY0YRQBIKAI6qfiY2dEcOuPd9z5h6u/qJkGRJ/jTANW6L5+6h4fu6Y+uIZZrCUtax85QhMX0fqPLv0wCA9jvVP2EIwAiKAw8zWr6WSSf40w4yB1H+JfG2nT1WBJvRIVMqtU/sxlt2N0CcDwuy0A/8Cq9kXOTpT3401oXZ40b8G+/c3bwEq4XrEjfgi4VtbBvQWC2vcrbBZLAn0euwCkxyK63SV/D2//HIApDyWM/9xLsZOQJdIt5+nWi1B1rUYVlbmcjrfXqMh1bPl7i6JnDnOJPr/W41dNwlE+YsLWzNTpXqIu+eInG4/kv0hcO9GQ9yw9aCRwMAo99/GgU7T6lRH7pLUsGyB4pjhe3yfELjBcWWLSSTzmJjvNTQniKQ+Lk8IofPZlIgqebxBDTAi302EVgju5rwi8G1xDlNDnuV60sj+ajsteeksH0fMypOHJ/jTRduxaVbJB5KtEZGdkTqSnrpxG5FNxJSydzsAMFm9ScnuK9OnamVRjSPAVjf5uiS5wxneqNcByDL1ArPosA+h+sjn6MJqQk7wNnylHz9cQ0u1tgbcSAwr/U9NePZ/Lq+H1Kj0SKWxRXd3SYkI6xt/fvoQDDXj+LuGINA0KFVIeCZqymEjL/GOWaKe+gLLSmiDDe7gm7FUBEsvPqvs6/IFDxwoksJMitjXIVi0QZmuuMzleXBR1Rmpsj2f6MD+xDXdjDMehDClUoW8/bWv4/CQNtcXpCxIrjcDIH7UP/Atnh1sAbo5I47QPOJzfotehXxSSuUC292q401X9vF/+jEJN/1Te2fwWOQWpe+pUODjH2sq0+i8UGqE8i9WS30x6st62xCtjPyPYRAQG7f5wXf8MLcH4+pTkWhWFmKvuLm3DYbnFntlYFWeBomdqz71Gi5/xsyMDvZoXNAS2q73KlZ1TB/nl9f08Vmy9Iey88K0jcG9joQ64dzuTIJHiaX8aZLCnG0gOJxeCJyniKvL9P8doyctBY10kO5p9mKS7dQFRC/F9b3KprDdeXJ9+RtkFradis59E9IsNuoL1/0s0LcjWu7Kvu5KVG7rpxz8A3ajDePJo0MYDjLdvM4q1xN+zC7F3uVVxZ6AM/XEyADJ5wxBiqlWdRGqOT+E2iNZMXHdX2r0lFNUHx7uq0DLx0oCgam22GSqsuPUI+E8T13wmUsMaaFofNH5wRHGJcnZOmlV4uQYbNm0rI0Atx80qXlm5pJhVgzjrBwJgawtnaecX+NLnHzFgdoagzLYvDNfN5EVNqnggvxpcCOOX+NLjnKj8aXAgPxpcCc/GlwJz8aXAnPxpcCc/GlwJz8aXAnPxpcCc/GlwJz8aXAnPxpcCc/GlwJz8aXAnPxpcCc/GlwntuG72BIXkKNEQyDPcUALZZ0vhhZwFphPsOp7HUEf1oI/rQR/Wgj+tBH9aCP6sQAAA",
+      "width": 412,
+      "height": 823
+    },
+    "nodes": {}
+  },
   "timing": {
     "entries": [
       {
-        "startTime": 1199.85,
+        "startTime": 1218.34,
         "name": "lh:config",
-        "duration": 780.21,
+        "duration": 811.03,
         "entryType": "measure"
       },
       {
-        "startTime": 1201.85,
+        "startTime": 1221.36,
         "name": "lh:config:resolveArtifactsToDefns",
-        "duration": 47.87,
+        "duration": 52.88,
         "entryType": "measure"
       },
       {
-        "startTime": 1980.18,
+        "startTime": 2029.5,
         "name": "lh:runner:gather",
-        "duration": 4671.96,
+        "duration": 5206.79,
         "entryType": "measure"
       },
       {
-        "startTime": 2077.81,
+        "startTime": 2118.61,
         "name": "lh:driver:connect",
-        "duration": 10.76,
+        "duration": 7.28,
         "entryType": "measure"
       },
       {
-        "startTime": 2088.98,
+        "startTime": 2126.22,
         "name": "lh:driver:navigate",
-        "duration": 8.06,
+        "duration": 9.15,
         "entryType": "measure"
       },
       {
-        "startTime": 2097.38,
+        "startTime": 2136.05,
         "name": "lh:gather:getBenchmarkIndex",
-        "duration": 1007.12,
+        "duration": 1006.99,
         "entryType": "measure"
       },
       {
-        "startTime": 3104.68,
+        "startTime": 3143.27,
         "name": "lh:gather:getVersion",
-        "duration": 0.86,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3105.62,
-        "name": "lh:gather:getDevicePixelRatio",
-        "duration": 1.08,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3106.86,
-        "name": "lh:prepare:navigationMode",
-        "duration": 153.5,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3107.79,
-        "name": "lh:gather:getVersion",
-        "duration": 0.53,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3138.71,
-        "name": "lh:storage:clearDataForOrigin",
-        "duration": 103.91,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3242.83,
-        "name": "lh:storage:clearBrowserCaches",
-        "duration": 15.29,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3259.1,
-        "name": "lh:gather:prepareThrottlingAndNetwork",
-        "duration": 1.23,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3265.64,
-        "name": "lh:driver:navigate",
-        "duration": 3347.25,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6616.94,
-        "name": "lh:computed:NetworkRecords",
-        "duration": 1.06,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6652.54,
-        "name": "lh:runner:audit",
-        "duration": 91.31,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6652.68,
-        "name": "lh:runner:auditing",
-        "duration": 90.75,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6653.65,
-        "name": "lh:audit:accesskeys",
-        "duration": 1.42,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6655.39,
-        "name": "lh:audit:aria-allowed-attr",
-        "duration": 0.86,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6656.55,
-        "name": "lh:audit:aria-allowed-role",
-        "duration": 1.1,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6657.97,
-        "name": "lh:audit:aria-command-name",
-        "duration": 1.2,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6659.6,
-        "name": "lh:audit:aria-conditional-attr",
-        "duration": 1.22,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6661.15,
-        "name": "lh:audit:aria-deprecated-role",
-        "duration": 1.09,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6662.58,
-        "name": "lh:audit:aria-dialog-name",
-        "duration": 1,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6663.97,
-        "name": "lh:audit:aria-hidden-body",
-        "duration": 1.54,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6665.94,
-        "name": "lh:audit:aria-hidden-focus",
-        "duration": 1.13,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6667.49,
-        "name": "lh:audit:aria-input-field-name",
-        "duration": 9.13,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6676.95,
-        "name": "lh:audit:aria-meter-name",
-        "duration": 1.11,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6678.39,
-        "name": "lh:audit:aria-progressbar-name",
-        "duration": 0.89,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6679.58,
-        "name": "lh:audit:aria-prohibited-attr",
-        "duration": 0.83,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6680.7,
-        "name": "lh:audit:aria-required-attr",
-        "duration": 0.82,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6681.82,
-        "name": "lh:audit:aria-required-children",
-        "duration": 1.02,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6683.19,
-        "name": "lh:audit:aria-required-parent",
-        "duration": 0.87,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6684.34,
-        "name": "lh:audit:aria-roles",
-        "duration": 0.8,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6685.44,
-        "name": "lh:audit:aria-text",
-        "duration": 1.03,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6686.91,
-        "name": "lh:audit:aria-toggle-field-name",
-        "duration": 1.11,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6688.54,
-        "name": "lh:audit:aria-tooltip-name",
-        "duration": 1.15,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6690.13,
-        "name": "lh:audit:aria-treeitem-name",
-        "duration": 1.06,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6691.49,
-        "name": "lh:audit:aria-valid-attr-value",
-        "duration": 1.15,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6692.93,
-        "name": "lh:audit:aria-valid-attr",
-        "duration": 0.82,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6694.04,
-        "name": "lh:audit:button-name",
-        "duration": 0.94,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6695.36,
-        "name": "lh:audit:bypass",
-        "duration": 0.86,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6696.51,
-        "name": "lh:audit:color-contrast",
-        "duration": 0.92,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6697.75,
-        "name": "lh:audit:definition-list",
-        "duration": 0.92,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6698.94,
-        "name": "lh:audit:dlitem",
-        "duration": 0.8,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6700.03,
-        "name": "lh:audit:document-title",
-        "duration": 0.8,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6701.1,
-        "name": "lh:audit:duplicate-id-aria",
-        "duration": 0.77,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6702.17,
-        "name": "lh:audit:empty-heading",
-        "duration": 0.78,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6703.21,
-        "name": "lh:audit:form-field-multiple-labels",
-        "duration": 0.78,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6704.27,
-        "name": "lh:audit:frame-title",
-        "duration": 0.82,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6705.46,
-        "name": "lh:audit:heading-order",
-        "duration": 0.9,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6706.66,
-        "name": "lh:audit:html-has-lang",
         "duration": 0.91,
         "entryType": "measure"
       },
       {
-        "startTime": 6707.86,
+        "startTime": 3144.23,
+        "name": "lh:gather:getDevicePixelRatio",
+        "duration": 0.91,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 3145.25,
+        "name": "lh:prepare:navigationMode",
+        "duration": 147.16,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 3146,
+        "name": "lh:gather:getVersion",
+        "duration": 0.43,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 3172.01,
+        "name": "lh:storage:clearDataForOrigin",
+        "duration": 100.7,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 3272.92,
+        "name": "lh:storage:clearBrowserCaches",
+        "duration": 17,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 3290.98,
+        "name": "lh:gather:prepareThrottlingAndNetwork",
+        "duration": 1.39,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 3297.39,
+        "name": "lh:driver:navigate",
+        "duration": 2577.73,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 5877.91,
+        "name": "lh:computed:NetworkRecords",
+        "duration": 0.67,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 5879.04,
+        "name": "lh:gather:getArtifact:DevtoolsLog",
+        "duration": 0.08,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 5879.13,
+        "name": "lh:gather:getArtifact:Accessibility",
+        "duration": 182.52,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6061.86,
+        "name": "lh:gather:getArtifact:NetworkUserAgent",
+        "duration": 0.15,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6062.02,
+        "name": "lh:gather:getArtifact:Stacks",
+        "duration": 9.63,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6062.21,
+        "name": "lh:gather:collectStacks",
+        "duration": 9.43,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6071.67,
+        "name": "lh:gather:getArtifact:FullPageScreenshot",
+        "duration": 1129.29,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7193.23,
+        "name": "lh:gather:getVersion",
+        "duration": 5.41,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7236.69,
+        "name": "lh:runner:audit",
+        "duration": 219.86,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7236.82,
+        "name": "lh:runner:auditing",
+        "duration": 219.33,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7238.35,
+        "name": "lh:audit:accesskeys",
+        "duration": 1.79,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7240.48,
+        "name": "lh:audit:aria-allowed-attr",
+        "duration": 6.79,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7247.78,
+        "name": "lh:audit:aria-allowed-role",
+        "duration": 5.36,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7253.5,
+        "name": "lh:audit:aria-command-name",
+        "duration": 1.4,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7255.25,
+        "name": "lh:audit:aria-conditional-attr",
+        "duration": 7.06,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7262.66,
+        "name": "lh:audit:aria-deprecated-role",
+        "duration": 4.89,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7267.89,
+        "name": "lh:audit:aria-dialog-name",
+        "duration": 1.35,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7269.54,
+        "name": "lh:audit:aria-hidden-body",
+        "duration": 5.88,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7275.76,
+        "name": "lh:audit:aria-hidden-focus",
+        "duration": 1.43,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7277.6,
+        "name": "lh:audit:aria-input-field-name",
+        "duration": 1.46,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7279.36,
+        "name": "lh:audit:aria-meter-name",
+        "duration": 1.68,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7281.35,
+        "name": "lh:audit:aria-progressbar-name",
+        "duration": 1.43,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7283.06,
+        "name": "lh:audit:aria-prohibited-attr",
+        "duration": 8.34,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7291.71,
+        "name": "lh:audit:aria-required-attr",
+        "duration": 4.34,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7296.34,
+        "name": "lh:audit:aria-required-children",
+        "duration": 1.51,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7298.11,
+        "name": "lh:audit:aria-required-parent",
+        "duration": 1.51,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7299.87,
+        "name": "lh:audit:aria-roles",
+        "duration": 4.05,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7304.2,
+        "name": "lh:audit:aria-text",
+        "duration": 1.55,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7306.02,
+        "name": "lh:audit:aria-toggle-field-name",
+        "duration": 1.59,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7307.87,
+        "name": "lh:audit:aria-tooltip-name",
+        "duration": 1.75,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7309.89,
+        "name": "lh:audit:aria-treeitem-name",
+        "duration": 1.72,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7311.86,
+        "name": "lh:audit:aria-valid-attr-value",
+        "duration": 4.02,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7316.14,
+        "name": "lh:audit:aria-valid-attr",
+        "duration": 3.98,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7324.74,
+        "name": "lh:audit:button-name",
+        "duration": 1.92,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7326.93,
+        "name": "lh:audit:bypass",
+        "duration": 3.98,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7331.16,
+        "name": "lh:audit:color-contrast",
+        "duration": 3.99,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7335.43,
+        "name": "lh:audit:definition-list",
+        "duration": 1.87,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7337.54,
+        "name": "lh:audit:dlitem",
+        "duration": 1.73,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7339.5,
+        "name": "lh:audit:document-title",
+        "duration": 3.29,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7342.98,
+        "name": "lh:audit:duplicate-id-aria",
+        "duration": 1.52,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7344.69,
+        "name": "lh:audit:empty-heading",
+        "duration": 1.61,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7346.5,
+        "name": "lh:audit:form-field-multiple-labels",
+        "duration": 1.71,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7348.39,
+        "name": "lh:audit:frame-title",
+        "duration": 1.65,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7350.24,
+        "name": "lh:audit:heading-order",
+        "duration": 1.73,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7352.18,
+        "name": "lh:audit:html-has-lang",
+        "duration": 7.45,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7359.84,
         "name": "lh:audit:html-lang-valid",
-        "duration": 0.78,
+        "duration": 3.44,
         "entryType": "measure"
       },
       {
-        "startTime": 6708.91,
+        "startTime": 7363.5,
         "name": "lh:audit:html-xml-lang-mismatch",
-        "duration": 0.79,
+        "duration": 2.13,
         "entryType": "measure"
       },
       {
-        "startTime": 6709.97,
+        "startTime": 7365.83,
         "name": "lh:audit:identical-links-same-purpose",
-        "duration": 0.79,
+        "duration": 3.09,
         "entryType": "measure"
       },
       {
-        "startTime": 6711.01,
+        "startTime": 7369.11,
         "name": "lh:audit:image-alt",
-        "duration": 0.71,
+        "duration": 1.82,
         "entryType": "measure"
       },
       {
-        "startTime": 6711.99,
+        "startTime": 7371.13,
         "name": "lh:audit:image-redundant-alt",
-        "duration": 0.81,
+        "duration": 1.97,
         "entryType": "measure"
       },
       {
-        "startTime": 6713.07,
+        "startTime": 7373.29,
         "name": "lh:audit:input-button-name",
-        "duration": 0.77,
+        "duration": 1.93,
         "entryType": "measure"
       },
       {
-        "startTime": 6714.1,
+        "startTime": 7375.41,
         "name": "lh:audit:input-image-alt",
-        "duration": 0.75,
+        "duration": 2.01,
         "entryType": "measure"
       },
       {
-        "startTime": 6715.1,
+        "startTime": 7377.61,
         "name": "lh:audit:label-content-name-mismatch",
-        "duration": 0.75,
+        "duration": 2.05,
         "entryType": "measure"
       },
       {
-        "startTime": 6716.13,
+        "startTime": 7379.84,
         "name": "lh:audit:label",
-        "duration": 0.72,
+        "duration": 6.01,
         "entryType": "measure"
       },
       {
-        "startTime": 6717.1,
+        "startTime": 7386.06,
         "name": "lh:audit:landmark-one-main",
-        "duration": 0.7,
+        "duration": 2.9,
         "entryType": "measure"
       },
       {
-        "startTime": 6718.07,
+        "startTime": 7389.16,
         "name": "lh:audit:link-name",
-        "duration": 4.56,
+        "duration": 2.97,
         "entryType": "measure"
       },
       {
-        "startTime": 6722.91,
+        "startTime": 7392.33,
         "name": "lh:audit:link-in-text-block",
-        "duration": 0.78,
+        "duration": 2.13,
         "entryType": "measure"
       },
       {
-        "startTime": 6723.96,
+        "startTime": 7394.65,
         "name": "lh:audit:list",
-        "duration": 0.75,
+        "duration": 2.21,
         "entryType": "measure"
       },
       {
-        "startTime": 6724.97,
+        "startTime": 7397.06,
         "name": "lh:audit:listitem",
-        "duration": 0.74,
+        "duration": 2.24,
         "entryType": "measure"
       },
       {
-        "startTime": 6725.96,
+        "startTime": 7399.49,
         "name": "lh:audit:meta-refresh",
-        "duration": 0.73,
+        "duration": 2.31,
         "entryType": "measure"
       },
       {
-        "startTime": 6726.96,
+        "startTime": 7402,
         "name": "lh:audit:meta-viewport",
-        "duration": 0.77,
+        "duration": 3.26,
         "entryType": "measure"
       },
       {
-        "startTime": 6727.98,
+        "startTime": 7405.45,
         "name": "lh:audit:object-alt",
-        "duration": 0.73,
+        "duration": 6.42,
         "entryType": "measure"
       },
       {
-        "startTime": 6728.96,
+        "startTime": 7412.08,
         "name": "lh:audit:select-name",
-        "duration": 0.7,
+        "duration": 2.51,
         "entryType": "measure"
       },
       {
-        "startTime": 6729.91,
+        "startTime": 7414.78,
         "name": "lh:audit:skip-link",
-        "duration": 0.69,
+        "duration": 3.01,
         "entryType": "measure"
       },
       {
-        "startTime": 6730.86,
+        "startTime": 7417.98,
         "name": "lh:audit:tabindex",
-        "duration": 0.73,
+        "duration": 2.55,
         "entryType": "measure"
       },
       {
-        "startTime": 6731.85,
+        "startTime": 7420.73,
         "name": "lh:audit:table-duplicate-name",
-        "duration": 0.75,
+        "duration": 2.62,
         "entryType": "measure"
       },
       {
-        "startTime": 6732.9,
+        "startTime": 7423.55,
         "name": "lh:audit:table-fake-caption",
-        "duration": 0.77,
+        "duration": 2.73,
         "entryType": "measure"
       },
       {
-        "startTime": 6733.93,
+        "startTime": 7426.46,
         "name": "lh:audit:target-size",
-        "duration": 0.71,
+        "duration": 2.97,
         "entryType": "measure"
       },
       {
-        "startTime": 6734.9,
+        "startTime": 7429.63,
         "name": "lh:audit:td-has-header",
-        "duration": 0.73,
+        "duration": 2.81,
         "entryType": "measure"
       },
       {
-        "startTime": 6735.89,
+        "startTime": 7432.64,
         "name": "lh:audit:td-headers-attr",
-        "duration": 0.77,
+        "duration": 6.6,
         "entryType": "measure"
       },
       {
-        "startTime": 6736.95,
+        "startTime": 7439.44,
         "name": "lh:audit:th-has-data-cells",
-        "duration": 0.74,
+        "duration": 2.96,
         "entryType": "measure"
       },
       {
-        "startTime": 6737.94,
+        "startTime": 7442.6,
         "name": "lh:audit:valid-lang",
-        "duration": 0.75,
+        "duration": 2.94,
         "entryType": "measure"
       },
       {
-        "startTime": 6738.94,
+        "startTime": 7445.73,
         "name": "lh:audit:video-caption",
-        "duration": 0.75,
+        "duration": 2.96,
         "entryType": "measure"
       },
       {
-        "startTime": 6739.71,
+        "startTime": 7448.71,
         "name": "lh:audit:custom-controls-labels",
-        "duration": 0.1,
+        "duration": 0.11,
         "entryType": "measure"
       },
       {
-        "startTime": 6739.82,
+        "startTime": 7448.82,
         "name": "lh:audit:custom-controls-roles",
-        "duration": 0.07,
+        "duration": 0.03,
         "entryType": "measure"
       },
       {
-        "startTime": 6739.9,
+        "startTime": 7448.86,
         "name": "lh:audit:focus-traps",
-        "duration": 0.06,
+        "duration": 0.02,
         "entryType": "measure"
       },
       {
-        "startTime": 6739.97,
+        "startTime": 7448.89,
         "name": "lh:audit:focusable-controls",
-        "duration": 0.05,
+        "duration": 0.08,
         "entryType": "measure"
       },
       {
-        "startTime": 6740.03,
+        "startTime": 7448.99,
         "name": "lh:audit:interactive-element-affordance",
-        "duration": 0.05,
+        "duration": 0.02,
         "entryType": "measure"
       },
       {
-        "startTime": 6740.09,
+        "startTime": 7449.02,
         "name": "lh:audit:logical-tab-order",
         "duration": 0.05,
         "entryType": "measure"
       },
       {
-        "startTime": 6740.16,
+        "startTime": 7449.08,
         "name": "lh:audit:managed-focus",
+        "duration": 0.04,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7449.12,
+        "name": "lh:audit:offscreen-content-hidden",
+        "duration": 0.02,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7449.14,
+        "name": "lh:audit:use-landmarks",
         "duration": 0.05,
         "entryType": "measure"
       },
       {
-        "startTime": 6740.22,
-        "name": "lh:audit:offscreen-content-hidden",
-        "duration": 0.06,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6740.29,
-        "name": "lh:audit:use-landmarks",
-        "duration": 0.08,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6740.38,
+        "startTime": 7449.22,
         "name": "lh:audit:visual-order-follows-dom",
-        "duration": 0.06,
+        "duration": 0.05,
         "entryType": "measure"
       },
       {
-        "startTime": 6740.71,
+        "startTime": 7449.48,
         "name": "lh:audit:autocomplete-valid",
-        "duration": 0.69,
+        "duration": 1.29,
         "entryType": "measure"
       },
       {
-        "startTime": 6741.68,
+        "startTime": 7450.98,
         "name": "lh:audit:presentation-role-conflict",
-        "duration": 0.79,
+        "duration": 2.52,
         "entryType": "measure"
       },
       {
-        "startTime": 6742.72,
+        "startTime": 7453.68,
         "name": "lh:audit:svg-img-alt",
-        "duration": 0.7,
+        "duration": 2.46,
         "entryType": "measure"
       },
       {
-        "startTime": 6743.44,
+        "startTime": 7456.16,
         "name": "lh:runner:generate",
-        "duration": 0.41,
+        "duration": 0.38,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7456.93,
+        "name": "lh:computed:EntityClassification",
+        "duration": 1.24,
         "entryType": "measure"
       }
     ],
-    "total": 4763.27
+    "total": 5426.65
   },
   "i18n": {
     "rendererFormattedStrings": {
@@ -1866,485 +2052,6 @@
       "warningHeader": "Warnings: "
     },
     "icuMessagePaths": {
-      "core/lib/lh-error.js | pageLoadFailedInterstitial": [
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "runtimeError.message"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "runWarnings[1]"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits.accesskeys.errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-allowed-attr].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-allowed-role].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-command-name].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-conditional-attr].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-deprecated-role].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-dialog-name].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-hidden-body].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-hidden-focus].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-input-field-name].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-meter-name].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-progressbar-name].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-prohibited-attr].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-required-attr].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-required-children].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-required-parent].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-roles].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-text].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-toggle-field-name].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-tooltip-name].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-treeitem-name].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-valid-attr-value].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[aria-valid-attr].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[button-name].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits.bypass.errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[color-contrast].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[definition-list].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits.dlitem.errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[document-title].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[duplicate-id-aria].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[empty-heading].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[form-field-multiple-labels].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[frame-title].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[heading-order].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[html-has-lang].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[html-lang-valid].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[html-xml-lang-mismatch].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[identical-links-same-purpose].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[image-alt].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[image-redundant-alt].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[input-button-name].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[input-image-alt].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[label-content-name-mismatch].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits.label.errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[landmark-one-main].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[link-name].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[link-in-text-block].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits.list.errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits.listitem.errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[meta-refresh].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[meta-viewport].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[object-alt].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[select-name].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[skip-link].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits.tabindex.errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[table-duplicate-name].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[table-fake-caption].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[target-size].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[td-has-header].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[td-headers-attr].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[th-has-data-cells].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[valid-lang].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[video-caption].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[custom-controls-labels].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[custom-controls-roles].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[focus-traps].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[focusable-controls].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[interactive-element-affordance].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[logical-tab-order].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[managed-focus].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[offscreen-content-hidden].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[use-landmarks].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[visual-order-follows-dom].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[autocomplete-valid].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[presentation-role-conflict].errorMessage"
-        },
-        {
-          "values": {
-            "errorCode": "CHROME_INTERSTITIAL_ERROR"
-          },
-          "path": "audits[svg-img-alt].errorMessage"
-        }
-      ],
-      "core/gather/driver/navigation.js | warningRedirected": [
-        {
-          "values": {
-            "requested": "http://localhost:8080/",
-            "final": "chrome-error://chromewebdata/"
-          },
-          "path": "runWarnings[0]"
-        }
-      ],
       "core/audits/accessibility/accesskeys.js | title": [
         "audits.accesskeys.title"
       ],
@@ -2356,6 +2063,26 @@
       ],
       "core/audits/accessibility/aria-allowed-attr.js | description": [
         "audits[aria-allowed-attr].description"
+      ],
+      "core/lib/i18n/i18n.js | columnFailingElem": [
+        "audits[aria-allowed-attr].details.headings[0].label",
+        "audits[aria-conditional-attr].details.headings[0].label",
+        "audits[aria-deprecated-role].details.headings[0].label",
+        "audits[aria-hidden-body].details.headings[0].label",
+        "audits[aria-prohibited-attr].details.headings[0].label",
+        "audits[aria-required-attr].details.headings[0].label",
+        "audits[aria-roles].details.headings[0].label",
+        "audits[aria-valid-attr-value].details.headings[0].label",
+        "audits[aria-valid-attr].details.headings[0].label",
+        "audits[color-contrast].details.headings[0].label",
+        "audits[document-title].details.headings[0].label",
+        "audits[html-has-lang].details.headings[0].label",
+        "audits[html-lang-valid].details.headings[0].label",
+        "audits[landmark-one-main].details.headings[0].label",
+        "audits[link-name].details.headings[0].label",
+        "audits[meta-viewport].details.headings[0].label",
+        "audits[skip-link].details.headings[0].label",
+        "audits[target-size].details.headings[0].label"
       ],
       "core/audits/accessibility/aria-allowed-role.js | title": [
         "audits[aria-allowed-role].title"
