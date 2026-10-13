@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2880" height="1800" viewBox="0 0 2880 1800" role="img">
+  <title>Meridian Mac frame</title>
+  <desc>Store template, 2880 by 1800. Browser window titled Meridian Globe showing sky #87CEEB and sphere #00BFFF. Drawn template, not a captured screenshot.</desc>
+  <rect width="2880" height="1800" fill="#F0F0F0"/>
+  <g id="macmark">
+      <defs>
+        <clipPath id="macmark-clip"><circle cx="250" cy="430" r="120"/></clipPath>
+      </defs>
+      <circle cx="250" cy="430" r="120" fill="#00BFFF"/>
+      <g clip-path="url(#macmark-clip)">
+        <circle cx="223.6" cy="463.6" r="110.4" fill="#404040" opacity="0.22"/>
+        <ellipse cx="286.0" cy="386.8" rx="33.6" ry="16.8" fill="#FFFFFF" opacity="0.55"
+          transform="rotate(-32 286.0 386.8)"/>
+      </g>
+      <g clip-path="url(#macmark-clip)" fill="none" stroke="#404040" stroke-width="1.92" stroke-linecap="round">
+        <ellipse cx="250" cy="430" rx="120" ry="39.6"/>
+        <ellipse cx="250" cy="430" rx="55.2" ry="120"/>
+        <ellipse cx="250" cy="374.8" rx="84.0" ry="15.600000000000001"/>
+        <ellipse cx="250" cy="485.2" rx="84.0" ry="15.600000000000001"/>
+      </g>
+      <g clip-path="url(#macmark-clip)" fill="none" stroke="#000000" stroke-width="3.12" stroke-linecap="round">
+        <ellipse cx="250" cy="430" rx="19.2" ry="120"/>
+        <line x1="130" y1="430" x2="370" y2="430"/>
+      </g>
+      <circle cx="250" cy="430" r="120" fill="none" stroke="#000000" stroke-width="5.40"/>
+    </g>
+<text x="140" y="680" fill="#000000" font-family="Arial, Liberation Sans, sans-serif" font-size="92" font-weight="700" text-anchor="start">Meridian</text>
+<text x="140" y="760" fill="#404040" font-family="Arial, Liberation Sans, sans-serif" font-size="36" font-weight="400" text-anchor="start">Hosted interactive globe experience.</text>
+<text x="140" y="880" fill="#000000" font-family="Arial, Liberation Sans, sans-serif" font-size="30" font-weight="400" text-anchor="start">Interactive 3D visualization</text>
+<text x="140" y="936" fill="#000000" font-family="Arial, Liberation Sans, sans-serif" font-size="30" font-weight="400" text-anchor="start">Opens in the browser</text>
+<text x="140" y="992" fill="#666666" font-family="Arial, Liberation Sans, sans-serif" font-size="30" font-weight="400" text-anchor="start">Ascend Maui</text>
+<clipPath id="macwin"><rect x="1040" y="150" width="1680" height="1500" rx="18"/></clipPath>
+<g clip-path="url(#macwin)">
+<rect x="1040" y="150" width="1680" height="1500" fill="#87CEEB"/>
+<rect x="1040" y="150" width="1680" height="72" fill="#000000"/>
+<text x="1076" y="196" fill="#FFFFFF" font-family="Arial, Liberation Sans, sans-serif" font-size="28" font-weight="400" text-anchor="start">Meridian Globe</text>
+<g id="macglobe">
+      <defs>
+        <clipPath id="macglobe-clip"><circle cx="1880.0" cy="936.0" r="390"/></clipPath>
+      </defs>
+      <circle cx="1880.0" cy="936.0" r="390" fill="#00BFFF"/>
+      <g clip-path="url(#macglobe-clip)">
+        <circle cx="1794.2" cy="1045.2" r="358.8" fill="#404040" opacity="0.22"/>
+        <ellipse cx="1997.0" cy="795.6" rx="109.20000000000002" ry="54.60000000000001" fill="#FFFFFF" opacity="0.55"
+          transform="rotate(-32 1997.0 795.6)"/>
+      </g>
+      <g clip-path="url(#macglobe-clip)" fill="none" stroke="#404040" stroke-width="6.24" stroke-linecap="round">
+        <ellipse cx="1880.0" cy="936.0" rx="390" ry="128.70000000000002"/>
+        <ellipse cx="1880.0" cy="936.0" rx="179.4" ry="390"/>
+        <ellipse cx="1880.0" cy="756.6" rx="273.0" ry="50.7"/>
+        <ellipse cx="1880.0" cy="1115.4" rx="273.0" ry="50.7"/>
+      </g>
+      <g clip-path="url(#macglobe-clip)" fill="none" stroke="#000000" stroke-width="10.14" stroke-linecap="round">
+        <ellipse cx="1880.0" cy="936.0" rx="62.4" ry="390"/>
+        <line x1="1490.0" y1="936.0" x2="2270.0" y2="936.0"/>
+      </g>
+      <circle cx="1880.0" cy="936.0" r="390" fill="none" stroke="#000000" stroke-width="17.55"/>
+    </g>
+</g>
+<rect x="1040" y="150" width="1680" height="1500" rx="18" fill="none" stroke="#000000" stroke-width="4"/>
+</svg>

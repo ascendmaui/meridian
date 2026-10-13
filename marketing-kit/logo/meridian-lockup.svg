@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="360" viewBox="0 0 1040 360" role="img">
+  <title>Meridian</title>
+  <desc>Meridian lockup. Globe mark with the word Meridian and the line Hosted interactive globe experience.</desc>
+  
+  <g id="lock">
+      <defs>
+        <clipPath id="lock-clip"><circle cx="180" cy="180" r="140"/></clipPath>
+      </defs>
+      <circle cx="180" cy="180" r="140" fill="#00BFFF"/>
+      <g clip-path="url(#lock-clip)">
+        <circle cx="149.2" cy="219.2" r="128.8" fill="#404040" opacity="0.22"/>
+        <ellipse cx="222.0" cy="129.6" rx="39.2" ry="19.6" fill="#FFFFFF" opacity="0.55"
+          transform="rotate(-32 222.0 129.6)"/>
+      </g>
+      <g clip-path="url(#lock-clip)" fill="none" stroke="#404040" stroke-width="2.24" stroke-linecap="round">
+        <ellipse cx="180" cy="180" rx="140" ry="46.2"/>
+        <ellipse cx="180" cy="180" rx="64.4" ry="140"/>
+        <ellipse cx="180" cy="115.6" rx="98.0" ry="18.2"/>
+        <ellipse cx="180" cy="244.4" rx="98.0" ry="18.2"/>
+      </g>
+      <g clip-path="url(#lock-clip)" fill="none" stroke="#000000" stroke-width="3.64" stroke-linecap="round">
+        <ellipse cx="180" cy="180" rx="22.400000000000002" ry="140"/>
+        <line x1="40" y1="180" x2="320" y2="180"/>
+      </g>
+      <circle cx="180" cy="180" r="140" fill="none" stroke="#000000" stroke-width="6.30"/>
+    </g>
+<text x="360" y="168" fill="#000000" font-family="Arial, Liberation Sans, sans-serif" font-size="92" font-weight="700" text-anchor="start">Meridian</text>
+<text x="364" y="230" fill="#404040" font-family="Arial, Liberation Sans, sans-serif" font-size="36" font-weight="400" text-anchor="start">Hosted interactive globe experience.</text>
+</svg>
