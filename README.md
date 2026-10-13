@@ -12,6 +12,7 @@ This repository is the durable source of truth for Meridian. Application source 
 - Performance optimized (gzip compression, caching)
 - Security headers (CSP, X-Frame-Options, etc.)
 - AI resource discovery support (ai-catalog.json, ARD schema)
+- Returns 404 for directory requests (instead of 500)
 - Comprehensive test suite (unit, integration, end-to-end)
 - Automated audits (performance, accessibility, agentic browsing, security, content, compatibility)
 
@@ -127,4 +128,4 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelin
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-*Last audit status updated: 2026-10-13T17:52:04.3NZ
+*Last audit status updated: 2026-10-13T18:37:24.3NZ

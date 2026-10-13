@@ -59,7 +59,7 @@ function handleRequest(req, res) {
 
     fs.readFile(filePath, (err, content) => {
       if (err) {
-        if (err.code === 'ENOENT') {
+        if (err.code === 'ENOENT' || err.code === 'EISDIR') {
           // Page not found
           fs.readFile(path.join(__dirname, '404.html'), (err, content) => {
             res.writeHead(404, { 'Content-Type': 'text/html' });

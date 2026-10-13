@@ -187,4 +187,14 @@ describe('Server Headers', () => {
     });
   });
 
+  test('should return 404 for directory request', (done) => {
+    // Request a directory that exists (the tests directory)
+    makeRequest('/tests', (err, res, data) => {
+      expect(err).toBeNull();
+      expect(res.statusCode).toBe(404);
+      expect(res.headers['content-type']).toBe('text/html');
+      done();
+    });
+  });
+
 });
