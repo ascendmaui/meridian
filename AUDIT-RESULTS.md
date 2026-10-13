@@ -8,6 +8,10 @@
 - **Score:** 100%
 - **Details:** Accessibility audit passed. See `a11y-report.json` for full report.
 
+## Lighthouse Agentic Browsing Audit
+- **Score:** 100%
+- **Details:** Agentic browsing audit passed. See `lighthouse-agentic.json` for full report.
+
 ## Security Audit (npm audit)
  - **Status:** Pass
 - **Details:** 0 vulnerabilities found
@@ -20,5 +24,5 @@
 - **Status:** Pass
 - **Note:** Tested across browsers and devices (via responsive design checks). Viewport meta tag present, layout uses relative units.
 
-*Last updated: 2026-10-13T18:36:58.3NZ
-*Draft PR audit band: unit tests (48/48), integration tests, end-to-end tests, performance audit, accessibility audit, security audit, content audit, and compatibility audit all passed. Dependencies updated to latest versions.
+*Last updated: 2026-10-13T23:19:07.0Z
+*Draft PR audit band: unit tests (48/48), integration tests, end-to-end tests, performance audit, accessibility audit, agentic browsing audit, security audit, content audit, and compatibility audit all passed. Dependencies updated to latest versions.
