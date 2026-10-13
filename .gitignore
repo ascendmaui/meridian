@@ -30,3 +30,7 @@ lighthouse-*.json
 *.bak2
 server-test.js
 update_summary.md
+
+# Accessibility reports we want to keep
+a11y-*.json
+!a11y-report.json
