@@ -45,7 +45,7 @@ fi
 
 echo "Server is ready and responding with HTTP 200!"
 
-# Run agentic browsing audit
+# Run performance audit
 echo "Running agentic browsing audit..."
 npx lighthouse --only-categories=agentic-browsing --output=json --output-path=./lighthouse-agentic.json http://localhost:8080
 EXIT_CODE=$?
