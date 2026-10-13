@@ -45,7 +45,7 @@ fi
 
 echo "Server is ready and responding with HTTP 200!"
 
-# Run performance audit
+# Run accessibility audit
 echo "Running accessibility audit..."
 npm run audit:accessibility
 EXIT_CODE=$?
