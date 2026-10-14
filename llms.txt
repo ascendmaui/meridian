@@ -1,0 +1,37 @@
+# Meridian Globe Experience - AI Agent Guidance
+
+## Site Overview
+Meridian is an interactive 3D globe visualization experience built with Three.js.
+The site provides a rotating globe visualization for educational and exploratory purposes.
+
+## Accessibility Features
+- Skip link for keyboard navigation to main content
+- ARIA labels on interactive elements
+- Semantic HTML structure
+- Responsive design for mobile and desktop
+
+## Data and Content
+- All content is static and served directly from the server
+- No user data is collected or stored
+- No external APIs are called during normal operation
+- Visualization uses publicly available geographic data (simplified)
+
+## Interaction Guidelines for AI Agents
+1. The primary interaction is visual - observing the rotating globe
+2. Keyboard navigation is available via skip link
+3. The visualization is designed to be left running without interaction
+4. No forms, inputs, or complex interactions are present
+
+## Technical Details
+- Built with HTML5, CSS3, JavaScript ES6
+- Uses Three.js r150+ from CDN
+- No build process or framework dependencies
+- Responsive design using viewport units
+
+## Contact and Policy
+- For questions about AI agent interaction, contact site administrators
+- This document follows the proposed llms.txt format for AI agent guidance
+- Last updated: 2026-10-05
+
+
+[Meridian Globe](/) - Interactive 3D globe visualization
