@@ -109,8 +109,8 @@ const port = parseInt(process.env.PORT || '8080', 10);
 
 // Start server only if this file is run directly (not imported as module)
 if (require.main === module) {
-  server.listen(port, "0.0.0.0");
-  server.listen(port, "::");
+  console.log("Listening on IPv4"); server.listen(port, "0.0.0.0");
+  console.log("Listening on IPv6"); server.listen(port, "::");
   server.on("listening", () => {
     console.log(`Server running at http://localhost:${port}/`);
   });
