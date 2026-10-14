@@ -1,0 +1,19 @@
+{
+  "specVersion": "1.0",
+  "entries": [
+    {
+      "identifier": "urn:air:ascendmaui:meridian:globe-visualization",
+      "displayName": "Meridian Globe Visualization",
+      "description": "Interactive 3D globe visualization for educational and exploratory purposes",
+      "type": "text/html",
+      "url": "http://localhost:8080/",
+      "representativeQueries": [
+        "Show me an interactive 3D globe",
+        "Visualize Earth in 3D",
+        "Interactive globe visualization",
+        "3D globe for education",
+        "Explore the globe interactively"
+      ]
+    }
+  ]
+}
