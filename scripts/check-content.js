@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-console.log("DEBUG: Script execution started");
-console.log("DEBUG: __dirname = ", __dirname);
-
 const fs = require('fs');
 const path = require('path');
 
@@ -12,9 +9,12 @@ function runAudit() {
 
   let content;
   try {
+    console.log('About to read file');
     content = fs.readFileSync(filePath, 'utf8');
+    console.log('File read successfully');
   } catch (error) {
-    console.error('Failed to read index.html:', error.message);
+    console.error('Failed to read index.html: ' + error.message);
+    console.error('Error object:', error);
     process.exit(1);
     return;
   }
@@ -61,7 +61,10 @@ function runAudit() {
     }
   }
 
-  if (!foundPlaceholder) {
+  if (foundPlaceholder) {
+    process.exit(1);
+    return;
+  } else {
     console.log('✅ No obvious placeholder text found');
   }
 
@@ -71,7 +74,7 @@ function runAudit() {
     let prevLevel = 0;
     let headingOrderOK = true;
     for (const match of headingMatches) {
-      const level = parseInt(match.match(/<h([1-6])/i)[1];
+      const level = parseInt(match.match(/<h([1-6])/i)[1]);
       if (level > prevLevel + 1) {
         headingOrderOK = false;
         break;

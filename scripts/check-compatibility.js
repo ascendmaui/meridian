@@ -69,7 +69,10 @@ function runAudit() {
     }
   }
 
-  if (!foundDeprecated) {
+  if (foundDeprecated) {
+    process.exit(1);
+    return;
+  } else {
     console.log('✅ No deprecated HTML tags found');
   }
 
