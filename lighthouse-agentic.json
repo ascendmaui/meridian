@@ -4,14 +4,14 @@
   "mainDocumentUrl": "http://localhost:8080/",
   "finalDisplayedUrl": "http://localhost:8080/",
   "finalUrl": "http://localhost:8080/",
-  "fetchTime": "2026-10-14T23:04:52.607Z",
+  "fetchTime": "2026-10-14T23:17:24.469Z",
   "gatherMode": "navigation",
   "runWarnings": [],
   "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
   "environment": {
     "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36",
     "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
-    "benchmarkIndex": 1837.5,
+    "benchmarkIndex": 2058,
     "credits": {
       "axe-core": "4.14.0"
     }
@@ -23,9 +23,9 @@
       "description": "Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).",
       "score": 1,
       "scoreDisplayMode": "numeric",
-      "numericValue": 0,
+      "numericValue": 0.01033715603181494,
       "numericUnit": "unitless",
-      "displayValue": "0",
+      "displayValue": "0.01",
       "scoringOptions": {
         "p10": 0.1,
         "median": 0.25
@@ -34,10 +34,10 @@
         "type": "debugdata",
         "items": [
           {
-            "cumulativeLayoutShiftMainFrame": 0,
+            "cumulativeLayoutShiftMainFrame": 0.01033715603181494,
             "newEngineResult": {
-              "cumulativeLayoutShift": 0,
-              "cumulativeLayoutShiftMainFrame": 0
+              "cumulativeLayoutShift": 0.01033715603181494,
+              "cumulativeLayoutShiftMainFrame": 0.01033715603181494
             },
             "newEngineResultDiffered": false
           }
@@ -298,7 +298,7 @@
   ],
   "fullPageScreenshot": {
     "screenshot": {
-      "data": "data:image/webp;base64,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",
+      "data": "data:image/webp;base64,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",
       "width": 412,
       "height": 823
     },
@@ -307,259 +307,259 @@
   "timing": {
     "entries": [
       {
-        "startTime": 1254.23,
+        "startTime": 1223.67,
         "name": "lh:config",
-        "duration": 774.82,
+        "duration": 787.71,
         "entryType": "measure"
       },
       {
-        "startTime": 1256.76,
+        "startTime": 1225.6,
         "name": "lh:config:resolveArtifactsToDefns",
-        "duration": 45.84,
+        "duration": 48.39,
         "entryType": "measure"
       },
       {
-        "startTime": 2029.19,
+        "startTime": 2011.54,
         "name": "lh:runner:gather",
-        "duration": 5732.23,
+        "duration": 5947,
         "entryType": "measure"
       },
       {
-        "startTime": 2150.59,
+        "startTime": 2121.33,
         "name": "lh:driver:connect",
-        "duration": 8.36,
+        "duration": 13.7,
         "entryType": "measure"
       },
       {
-        "startTime": 2159.25,
+        "startTime": 2135.37,
         "name": "lh:driver:navigate",
-        "duration": 9.22,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 2169.36,
-        "name": "lh:gather:getBenchmarkIndex",
-        "duration": 1006.7,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3176.2,
-        "name": "lh:gather:getVersion",
-        "duration": 0.83,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3177.11,
-        "name": "lh:gather:getDevicePixelRatio",
-        "duration": 0.95,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3178.19,
-        "name": "lh:prepare:navigationMode",
-        "duration": 153.51,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3178.9,
-        "name": "lh:gather:getVersion",
-        "duration": 0.38,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3200.94,
-        "name": "lh:storage:clearDataForOrigin",
-        "duration": 99.86,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3301.01,
-        "name": "lh:storage:clearBrowserCaches",
-        "duration": 27.87,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3330.06,
-        "name": "lh:gather:prepareThrottlingAndNetwork",
-        "duration": 1.6,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 3424.87,
-        "name": "lh:driver:navigate",
-        "duration": 2692.5,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6311.9,
-        "name": "lh:computed:NetworkRecords",
-        "duration": 0.67,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6313.05,
-        "name": "lh:gather:getArtifact:WebMCP",
-        "duration": 3.93,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6317,
-        "name": "lh:gather:getArtifact:WebMcpSchemaIssues",
-        "duration": 0.14,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6317.16,
-        "name": "lh:gather:getArtifact:LlmsTxt",
-        "duration": 3.41,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6320.58,
-        "name": "lh:gather:getArtifact:DevtoolsLog",
-        "duration": 0.07,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6320.67,
-        "name": "lh:gather:getArtifact:Trace",
-        "duration": 0.04,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6320.73,
-        "name": "lh:gather:getArtifact:Accessibility",
-        "duration": 177.19,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6497.94,
-        "name": "lh:gather:getArtifact:Inputs",
-        "duration": 3.27,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6501.4,
-        "name": "lh:gather:getArtifact:NetworkUserAgent",
-        "duration": 0.14,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6501.55,
-        "name": "lh:gather:getArtifact:RobotsTxt",
-        "duration": 5.54,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6507.14,
-        "name": "lh:gather:getArtifact:AgentResourceDiscovery",
-        "duration": 10.04,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6517.2,
-        "name": "lh:gather:getArtifact:Stacks",
-        "duration": 12.06,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6517.4,
-        "name": "lh:gather:collectStacks",
-        "duration": 11.84,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 6529.28,
-        "name": "lh:gather:getArtifact:FullPageScreenshot",
-        "duration": 1212.44,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 7734.97,
-        "name": "lh:gather:getVersion",
-        "duration": 4.82,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 7762.09,
-        "name": "lh:runner:audit",
-        "duration": 68.29,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 7762.34,
-        "name": "lh:runner:auditing",
-        "duration": 67.63,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 7763.98,
-        "name": "lh:audit:cumulative-layout-shift",
-        "duration": 50.87,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 7764.57,
-        "name": "lh:computed:CumulativeLayoutShift",
-        "duration": 48.53,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 7764.72,
-        "name": "lh:computed:ProcessedTrace",
-        "duration": 34.34,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 7815.24,
-        "name": "lh:audit:agent-accessibility-tree",
-        "duration": 1.4,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 7816.93,
-        "name": "lh:audit:webmcp-registered-tools",
-        "duration": 0.93,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 7818.08,
-        "name": "lh:audit:webmcp-form-coverage",
-        "duration": 1.05,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 7819.42,
-        "name": "lh:audit:webmcp-schema-validity",
-        "duration": 0.94,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 7820.66,
-        "name": "lh:audit:llms-txt",
-        "duration": 0.99,
-        "entryType": "measure"
-      },
-      {
-        "startTime": 7822.05,
-        "name": "lh:audit:ard-schema",
         "duration": 7.91,
         "entryType": "measure"
       },
       {
-        "startTime": 7829.98,
-        "name": "lh:runner:generate",
+        "startTime": 2143.69,
+        "name": "lh:gather:getBenchmarkIndex",
+        "duration": 1007.51,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 3151.33,
+        "name": "lh:gather:getVersion",
+        "duration": 0.63,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 3152.02,
+        "name": "lh:gather:getDevicePixelRatio",
+        "duration": 0.96,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 3153.11,
+        "name": "lh:prepare:navigationMode",
+        "duration": 166.42,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 3154.06,
+        "name": "lh:gather:getVersion",
         "duration": 0.38,
         "entryType": "measure"
       },
       {
-        "startTime": 7830.77,
+        "startTime": 3176.77,
+        "name": "lh:storage:clearDataForOrigin",
+        "duration": 102.32,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 3279.3,
+        "name": "lh:storage:clearBrowserCaches",
+        "duration": 37.79,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 3318.06,
+        "name": "lh:gather:prepareThrottlingAndNetwork",
+        "duration": 1.44,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 3394.96,
+        "name": "lh:driver:navigate",
+        "duration": 2890.06,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6501.6,
+        "name": "lh:computed:NetworkRecords",
+        "duration": 0.65,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6502.7,
+        "name": "lh:gather:getArtifact:WebMCP",
+        "duration": 3.47,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6506.19,
+        "name": "lh:gather:getArtifact:WebMcpSchemaIssues",
+        "duration": 0.11,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6506.31,
+        "name": "lh:gather:getArtifact:LlmsTxt",
+        "duration": 4.99,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6511.33,
+        "name": "lh:gather:getArtifact:DevtoolsLog",
+        "duration": 0.11,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6511.47,
+        "name": "lh:gather:getArtifact:Trace",
+        "duration": 0.05,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6511.53,
+        "name": "lh:gather:getArtifact:Accessibility",
+        "duration": 190.25,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6702,
+        "name": "lh:gather:getArtifact:Inputs",
+        "duration": 3.05,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6705.22,
+        "name": "lh:gather:getArtifact:NetworkUserAgent",
+        "duration": 0.12,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6705.36,
+        "name": "lh:gather:getArtifact:RobotsTxt",
+        "duration": 5.39,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6710.79,
+        "name": "lh:gather:getArtifact:AgentResourceDiscovery",
+        "duration": 9.2,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6720.01,
+        "name": "lh:gather:getArtifact:Stacks",
+        "duration": 10.96,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6720.18,
+        "name": "lh:gather:collectStacks",
+        "duration": 10.77,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 6730.99,
+        "name": "lh:gather:getArtifact:FullPageScreenshot",
+        "duration": 1208.52,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7932.52,
+        "name": "lh:gather:getVersion",
+        "duration": 4.69,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7959.08,
+        "name": "lh:runner:audit",
+        "duration": 73.11,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7959.4,
+        "name": "lh:runner:auditing",
+        "duration": 72.3,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7961.18,
+        "name": "lh:audit:cumulative-layout-shift",
+        "duration": 54.41,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7961.68,
+        "name": "lh:computed:CumulativeLayoutShift",
+        "duration": 52.43,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 7961.83,
+        "name": "lh:computed:ProcessedTrace",
+        "duration": 36.66,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 8015.93,
+        "name": "lh:audit:agent-accessibility-tree",
+        "duration": 1.2,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 8017.37,
+        "name": "lh:audit:webmcp-registered-tools",
+        "duration": 0.81,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 8018.42,
+        "name": "lh:audit:webmcp-form-coverage",
+        "duration": 0.74,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 8019.48,
+        "name": "lh:audit:webmcp-schema-validity",
+        "duration": 1.05,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 8020.87,
+        "name": "lh:audit:llms-txt",
+        "duration": 1.1,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 8022.39,
+        "name": "lh:audit:ard-schema",
+        "duration": 9.28,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 8031.71,
+        "name": "lh:runner:generate",
+        "duration": 0.46,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 8032.62,
         "name": "lh:computed:EntityClassification",
-        "duration": 1.71,
+        "duration": 1.86,
         "entryType": "measure"
       }
     ],
-    "total": 5800.5199999999995
+    "total": 6020.11
   },
   "i18n": {
     "rendererFormattedStrings": {
