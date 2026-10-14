@@ -348,4 +348,114 @@ describe('initGlobe', () => {
     // Verify that the rotation has changed
     expect(sphereInstance.rotation.y).toBeGreaterThan(initialRotation);
   });
+  test('should register load event listener and handle initialization errors via THREE.Scene throwing', async () => {
+    // Mock container
+    const mockContainer = {
+      clientWidth: 800,
+      clientHeight: 600,
+      appendChild: jest.fn(),
+    };
+
+    // Mock document.getElementById to return our container
+    const documentGetElementByIdSpy = jest.spyOn(document, 'getElementById');
+    documentGetElementByIdSpy.mockReturnValue(mockContainer);
+
+    // Mock window.addEventListener (just spy, don't replace implementation)
+    const windowAddEventListenerSpy = jest.spyOn(window, 'addEventListener');
+
+    // Mock window.requestAnimationFrame
+    const windowRequestAnimationFrameSpy = jest.spyOn(window, 'requestAnimationFrame');
+    let rafCallCount = 0;
+    let rafCallback = null;
+    const YIELD_TO_BROWSER_CALLS = 14; // 7 yieldToBrowser calls * 2 RAF calls each
+    windowRequestAnimationFrameSpy.mockImplementation((cb) => {
+      rafCallCount++;
+      if (rafCallCount <= YIELD_TO_BROWSER_CALLS) {
+        // For yieldToBrowser calls, call the callback immediately
+        cb();
+      } else {
+        // For animation loop and beyond, store the callback without calling it
+        rafCallback = cb;
+      }
+      // Return a fake requestId
+      return Date.now() + rafCallCount;
+    });
+
+    // Mock THREE global - make Scene throw an error to cause initGlobe to fail
+    const mockTHREE = {
+      Scene: jest.fn().mockImplementation(() => {
+        throw new Error('Three.Scene creation failed');
+      }),
+      PerspectiveCamera: jest.fn().mockImplementation(() => {
+        return {
+          position: {
+            set: jest.fn(),
+          },
+          aspect: 0, // will be set in initGlobe
+          updateProjectionMatrix: jest.fn(),
+        };
+      }),
+      WebGLRenderer: jest.fn().mockImplementation(() => {
+        return {
+          setSize: jest.fn(),
+          domElement: {},
+          render: jest.fn(),
+        };
+      }),
+      SphereGeometry: jest.fn().mockImplementation(() => {
+        return {};
+      }),
+      MeshStandardMaterial: jest.fn().mockImplementation(() => {
+        return {};
+      }),
+      Mesh: jest.fn().mockImplementation((geometry, material) => {
+        return {
+          geometry,
+          material,
+          rotation: { y: 0 },
+        };
+      }),
+      DirectionalLight: jest.fn().mockImplementation(() => {
+        return {
+          position: {
+            set: jest.fn(),
+          },
+        };
+      }),
+      AmbientLight: jest.fn().mockImplementation(() => {
+        return {};
+      }),
+      Color: jest.fn().mockImplementation((color) => {
+        // Return a mock object that represents a color
+        return { color };
+      }),
+    };
+    global.THREE = mockTHREE;
+
+    // Mock console
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+    const consoleErrorSpy = jest.spyOn(console, 'error');
+
+    // Import the module (this will execute the module and register event listeners)
+    const { initGlobe } = require('../../src/index');
+
+    // Verify load event listener was registered
+    expect(windowAddEventListenerSpy).toHaveBeenCalledWith('load', expect.any(Function));
+    
+    // Extract the load event callback
+    const loadCallback = windowAddEventListenerSpy.mock.calls
+      .find(call => call[0] === 'load')[1];
+    
+    // Execute the load event callback
+    loadCallback();
+
+    // Wait for promise to settle
+    await new Promise(resolve => setTimeout(resolve, 0));
+
+    // Verify console.error was called with expected message
+    expect(consoleErrorSpy).toHaveBeenCalledWith(
+      'Failed to initialize globe:',
+      new Error('Three.Scene creation failed')
+    );
+  });
 });
