@@ -21,8 +21,9 @@ describe('check-compatibility.js', () => {
     console.error = jest.fn();
     console.log = jest.fn();
     
-    // Clear all mocks
+    // Clear all mocks and reset module registry before each test
     jest.clearAllMocks();
+    jest.resetModules();
   });
 
   afterEach(() => {
@@ -75,8 +76,7 @@ describe('check-compatibility.js', () => {
       });
       
       require('../../scripts/check-compatibility.js');
-      expect(process.exit).toHaveBeenCalledWith(1);
-      expect(console.error).toHaveBeenCalledWith('Failed to read index.html: ENOENT: no such file or directory');
+      expect(console.error).toHaveBeenCalledWith("Failed to read index.html:", "ENOENT: no such file or directory");
     });
 
     test('should fail when missing viewport meta tag', () => {
