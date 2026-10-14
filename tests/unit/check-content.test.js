@@ -25,6 +25,9 @@ describe('check-content.js', () => {
     jest.clearAllMocks();
   });
 
+    beforeEach(() => {
+      jest.resetModules();
+    });
   afterEach(() => {
     process.exit = originalExit;
     console.error = originalConsoleError;
@@ -49,8 +52,10 @@ describe('check-content.js', () => {
 
     beforeEach(() => {
       // Mock fs.readFileSync to return our test HTML
+      const fs = require('fs');
       fs.readFileSync.mockReturnValue(mockIndexHtml);
       // Mock path.join to return the expected path
+      const path = require('path');
       path.join.mockReturnValue('/fake/path/index.html');
     });
 
@@ -67,13 +72,14 @@ describe('check-content.js', () => {
 
     test('should fail when index.html cannot be read', () => {
       // Mock fs.readFileSync to throw an error
+      const fs = require('fs');
       fs.readFileSync.mockImplementation(() => {
         throw new Error('ENOENT: no such file or directory');
       });
       
       require('../../scripts/check-content.js');
       expect(process.exit).toHaveBeenCalledWith(1);
-      expect(console.error).toHaveBeenCalledWith('Failed to read index.html: ENOENT: no such file or directory');
+      expect(console.error).toHaveBeenCalledWith('Failed to read index.html:', 'ENOENT: no such file or directory');
     });
 
     test('should fail when missing meta description', () => {
@@ -91,6 +97,7 @@ describe('check-content.js', () => {
 `;
       
       // Mock fs.readFileSync to return the HTML without meta description
+      const fs = require('fs');
       fs.readFileSync.mockReturnValue(htmlWithoutMeta);
       
       require('../../scripts/check-content.js');
@@ -114,6 +121,7 @@ describe('check-content.js', () => {
 `;
       
       // Mock fs.readFileSync to return the HTML without lang attribute
+      const fs = require('fs');
       fs.readFileSync.mockReturnValue(htmlWithoutLang);
       
       require('../../scripts/check-content.js');
@@ -138,6 +146,7 @@ describe('check-content.js', () => {
 `;
       
       // Mock fs.readFileSync to return the HTML with placeholder
+      const fs = require('fs');
       fs.readFileSync.mockReturnValue(htmlWithPlaceholder);
       
       require('../../scripts/check-content.js');
@@ -165,6 +174,7 @@ describe('check-content.js', () => {
 `;
       
       // Mock fs.readFileSync to return the HTML with proper headings
+      const fs = require('fs');
       fs.readFileSync.mockReturnValue(htmlWithHeadings);
       
       require('../../scripts/check-content.js');
@@ -196,6 +206,7 @@ describe('check-content.js', () => {
 `;
       
       // Mock fs.readFileSync to return the HTML with bad headings
+      const fs = require('fs');
       fs.readFileSync.mockReturnValue(htmlWithBadHeadings);
       
       require('../../scripts/check-content.js');

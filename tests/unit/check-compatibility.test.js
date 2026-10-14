@@ -21,11 +21,13 @@ describe('check-compatibility.js', () => {
     console.error = jest.fn();
     console.log = jest.fn();
     
-    // Clear all mocks and reset module registry before each test
+    // Clear all mocks
     jest.clearAllMocks();
-    jest.resetModules();
   });
 
+    beforeEach(() => {
+      jest.resetModules();
+    });
   afterEach(() => {
     process.exit = originalExit;
     console.error = originalConsoleError;
@@ -54,8 +56,10 @@ describe('check-compatibility.js', () => {
 
     beforeEach(() => {
       // Mock fs.readFileSync to return our test HTML
+      const fs = require('fs');
       fs.readFileSync.mockReturnValue(mockIndexHtml);
       // Mock path.join to return the expected path
+      const path = require('path');
       path.join.mockReturnValue('/fake/path/index.html');
     });
 
@@ -71,9 +75,13 @@ describe('check-compatibility.js', () => {
 
     test('should fail when index.html cannot be read', () => {
       // Mock fs.readFileSync to throw an error
+      const fs = require('fs');
       fs.readFileSync.mockImplementation(() => {
         throw new Error('ENOENT: no such file or directory');
       });
+      // Mock path.join to return the expected path
+      const path = require('path');
+      path.join.mockReturnValue('/fake/path/index.html');
       
       require('../../scripts/check-compatibility.js');
       expect(console.error).toHaveBeenCalledWith("Failed to read index.html:", "ENOENT: no such file or directory");
@@ -94,7 +102,11 @@ describe('check-compatibility.js', () => {
 `;
       
       // Mock fs.readFileSync to return the HTML without viewport
+      const fs = require('fs');
       fs.readFileSync.mockReturnValue(htmlWithoutViewport);
+      // Mock path.join to return the expected path
+      const path = require('path');
+      path.join.mockReturnValue('/fake/path/index.html');
       
       require('../../scripts/check-compatibility.js');
       expect(process.exit).toHaveBeenCalledWith(1);
@@ -117,7 +129,11 @@ describe('check-compatibility.js', () => {
 `;
       
       // Mock fs.readFileSync to return the HTML with wrong viewport
+      const fs = require('fs');
       fs.readFileSync.mockReturnValue(htmlWrongViewport);
+      // Mock path.join to return the expected path
+      const path = require('path');
+      path.join.mockReturnValue('/fake/path/index.html');
       
       require('../../scripts/check-compatibility.js');
       expect(process.exit).toHaveBeenCalledWith(1);
@@ -140,7 +156,11 @@ describe('check-compatibility.js', () => {
 `;
       
       // Mock fs.readFileSync to return the HTML with wrong viewport
+      const fs = require('fs');
       fs.readFileSync.mockReturnValue(htmlWrongViewport);
+      // Mock path.join to return the expected path
+      const path = require('path');
+      path.join.mockReturnValue('/fake/path/index.html');
       
       require('../../scripts/check-compatibility.js');
       expect(process.exit).toHaveBeenCalledWith(1);
@@ -165,7 +185,11 @@ describe('check-compatibility.js', () => {
 `;
       
       // Mock fs.readFileSync to return the HTML with deprecated tag
+      const fs = require('fs');
       fs.readFileSync.mockReturnValue(htmlWithDeprecated);
+      // Mock path.join to return the expected path
+      const path = require('path');
+      path.join.mockReturnValue('/fake/path/index.html');
       
       require('../../scripts/check-compatibility.js');
       expect(process.exit).toHaveBeenCalledWith(1);
@@ -193,7 +217,11 @@ describe('check-compatibility.js', () => {
 `;
       
       // Mock fs.readFileSync to return the HTML without relative units
+      const fs = require('fs');
       fs.readFileSync.mockReturnValue(htmlNoRelativeUnits);
+      // Mock path.join to return the expected path
+      const path = require('path');
+      path.join.mockReturnValue('/fake/path/index.html');
       
       require('../../scripts/check-compatibility.js');
       expect(process.exit).toHaveBeenCalledWith(1);
@@ -217,7 +245,11 @@ describe('check-compatibility.js', () => {
 `;
       
       // Mock fs.readFileSync to return the HTML with inline style
+      const fs = require('fs');
       fs.readFileSync.mockReturnValue(htmlWithInlineStyle);
+      // Mock path.join to return the expected path
+      const path = require('path');
+      path.join.mockReturnValue('/fake/path/index.html');
       
       require('../../scripts/check-compatibility.js');
       expect(process.exit).toHaveBeenCalledWith(0);

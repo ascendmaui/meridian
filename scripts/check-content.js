@@ -9,16 +9,14 @@ function runAudit() {
 
   let content;
   try {
-    console.log('About to read file');
     content = fs.readFileSync(filePath, 'utf8');
-    console.log('File read successfully');
   } catch (error) {
-    console.error('Failed to read index.html: ' + error.message);
-    console.error('Error object:', error);
+    console.error('Failed to read index.html:', error.message);
     process.exit(1);
     return;
   }
 
+  console.log("[DEBUG] typeof content:", typeof content, "content:", content);
   if (typeof content !== 'string') {
     console.error('Failed to read index.html: content is not a string');
     process.exit(1);
