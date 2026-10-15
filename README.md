@@ -6,16 +6,31 @@ This repository is the durable source of truth for Meridian. Application source 
 
 ## Status
 
-Scaffold / SoT repo. Content beyond this README has not been checked in yet.
+Project is under development with source code, tests, and documentation.
 
-## Planned layout
+## Audit Status
 
-```
-src/          # globe client
-public/       # static assets
-docs/         # product notes
-```
+| Audit | Status | Score |
+|-------|--------|-------|
+| Performance | ✅ Passed | 100% |
+| Accessibility | ✅ Passed | 100% |
+| Security | ✅ Passed | 0 vulnerabilities |
+*Last updated: 2026-10-15T03:07:13.3Z
+| Content | ✅ Passed | Manual review passed |
+| Compatibility | ✅ Passed | Manual review passed |
+| Agentic Browsing | ✅ Passed | 100% |
 
-## Related
+## Running Audits Locally
 
-Owned by Ascend Maui (`ascendmaui/meridian`).
+You can run the audit scripts directly:
+
+- Performance: `./run-audit-performance.sh`
+- Accessibility: `./run-audit-accessibility.sh`
+- Agentic Browsing: `./run-audit-agentic.sh`
+- Security: `npm audit`
+- Content: `npm run audit:content`
+- Compatibility: `npm run audit:compatibility`
+
+All scripts will start the server, run the audit, and then stop the server.
+
+The CI workflow runs these checks on pull requests targeting `main` or `develop`.

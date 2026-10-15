@@ -9,3 +9,28 @@ build/
 .vercel
 .idea/
 .vscode/
+
+# Audit and test generated files
+*.exit
+*.output
+*.bak
+*.backup
+lighthouse-agentic.json
+server.*
+test-server-*.js
+!test-server.js
+# Lighthouse reports we want to keep
+lighthouse-*.json
+!lighthouse-report.json
+!a11y-report.json
+
+# Additional ignore patterns for audit artifacts
+*.out
+*.pid
+*.bak2
+server-test.js
+update_summary.md
+
+# Accessibility reports we want to keep
+a11y-*.json
+!a11y-report.json
