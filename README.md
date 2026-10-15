@@ -20,3 +20,17 @@ Project is under development with source code, tests, and documentation.
 | Compatibility | ✅ Passed | Manual review passed |
 | Agentic Browsing | ✅ Passed | 100% |
 
+## Running Audits Locally
+
+You can run the audit scripts directly:
+
+- Performance: `./run-audit-performance.sh`
+- Accessibility: `./run-audit-accessibility.sh`
+- Agentic Browsing: `./run-audit-agentic.sh`
+- Security: `npm audit`
+- Content: `npm run audit:content`
+- Compatibility: `npm run audit:compatibility`
+
+All scripts will start the server, run the audit, and then stop the server.
+
+The CI workflow runs these checks on pull requests targeting `main` or `develop`.
