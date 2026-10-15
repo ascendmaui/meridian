@@ -1,0 +1,26 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Ascend Maui",
+    "identifier": "did:web:ascendmaui.example.com",
+    "documentationUrl": "https://ascendmaui.example.com/docs"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:ascendmaui:meridian:globe-experience",
+      "displayName": "Meridian Globe Experience",
+      "type": "application/ai-catalog+json",
+      "url": "http://localhost:8080/",
+      "representativeQueries": [
+        "show globe",
+        "rotate globe", 
+        "zoom globe",
+        "explore interactive 3D visualization",
+        "view educational globe experience"
+      ],
+      "trustManifest": {
+        "identity": "ascendmaui.example.com"
+      }
+    }
+  ]
+}
